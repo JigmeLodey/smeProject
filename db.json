@@ -1,16 +1,30 @@
 {
-  "posts": [
+  "auth": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "thebridge",
+      "email": "admin@thebridge.com",
+      "password": "admin@2020",
+      "role": "admin"
+    },
+    {
+      "name": "fyda",
+      "email": "fyda@gmail.com",
+      "password": "12345",
+      "gender": "male",
+      "number": 77455740,
+      "role": "member",
+      "id": 2
     }
   ],
-  "comments": [
+  "request": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "email": "email"
+    },
+    {
+      "email": "jigme.lodey@dcpl.bt",
+      "id": 2
     }
   ],
   "profile": {
