@@ -74,27 +74,31 @@ export class AuthComponent implements OnInit {
   }
 
   onLogin(): void {
-    this.service.getAuth().subscribe(res => {
-      this.leng = Object.keys(res).length;
-      for (let i = 0; i < this.leng; i++) {
-        if (res[i].email === this.loginForm.value.email && res[i].password === this.loginForm.value.password) {
-          this.loginChecker = true;
-          this.indexing = i;
-          break;
-        } else {
-          this.loginChecker = false;
+    if (this.loginForm.valid) {
+      this.service.getAuth().subscribe(res => {
+        this.leng = Object.keys(res).length;
+        for (let i = 0; i < this.leng; i++) {
+          if (res[i].email === this.loginForm.value.email && res[i].password === this.loginForm.value.password) {
+            this.loginChecker = true;
+            this.indexing = i;
+            break;
+          } else {
+            this.loginChecker = false;
+          }
         }
-      }
-      if (this.loginChecker) {
-        if (res[this.indexing].role === 'admin') {
-          this.route.navigate(['/admin']);
+        if (this.loginChecker) {
+          if (res[this.indexing].role === 'admin') {
+            this.route.navigate(['/admin']);
+          } else {
+            this.route.navigate(['/user']);
+          }
         } else {
-          this.route.navigate(['/user']);
+          this.notifier.notify('error', 'Invalid email or password');
         }
-      } else {
-        this.notifier.notify('error', 'Invalid email or password');
-      }
-    });
+      });
+    } else {
+      this.notifier.notify('error', 'Please fill up');
+    }
   }
 
   onForgot() {
@@ -116,30 +120,34 @@ export class AuthComponent implements OnInit {
   }
 
   register() {
-    this.service.getAuth().subscribe(res => {
-      this.leng = Object.keys(res).length;
-      for (let i = 0; i < this.leng; i++) {
-        if (res[i].email === this.signUpForm.value.email) {
-          this.SignUpChecker = false;
-        } else {
-          this.SignUpChecker = true;
-        }
-      }
-      if (this.SignUpChecker) {
-        this.service.onPostSignUp(this.signUpForm.value).subscribe(response => {
-          if (response) {
-            this.signUpClick = false;
-            this.loginMein = true;
-            this.notifier.notify('success', 'Create Success');
-            this.signUpForm.reset();
+    if (this.signUpForm.valid) {
+      this.service.getAuth().subscribe(res => {
+        this.leng = Object.keys(res).length;
+        for (let i = 0; i < this.leng; i++) {
+          if (res[i].email === this.signUpForm.value.email) {
+            this.SignUpChecker = false;
           } else {
-            this.notifier.notify('error', 'Account create fail');
+            this.SignUpChecker = true;
           }
-        });
-      } else {
-        this.notifier.notify('error', 'Email already exist');
-      }
-    });
+        }
+        if (this.SignUpChecker) {
+          this.service.onPostSignUp(this.signUpForm.value).subscribe(response => {
+            if (response) {
+              this.signUpClick = false;
+              this.loginMein = true;
+              this.notifier.notify('success', 'Create Success');
+              this.signUpForm.reset();
+            } else {
+              this.notifier.notify('error', 'Account create fail');
+            }
+          });
+        } else {
+          this.notifier.notify('error', 'Email already exist');
+        }
+      });
+    } else {
+      this.notifier.notify('error', 'Failed to create');
+    }
   }
 }
 
