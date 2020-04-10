@@ -60,10 +60,10 @@ export class AuthComponent implements OnInit {
   }
 
   home(): void {
-
+  this.route.navigate(['/']);
   }
 
-  onSubmit() {
+  onSubmit(): void {
    if (this.forgotForm.valid) {
      this.service.onRequest(this.forgotForm.value).subscribe(response => {
        if (response) {

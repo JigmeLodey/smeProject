@@ -1,1 +1,253 @@
-<p>desktop works!</p>
+<div class="body" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" *ngIf="scroll">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">The Bridge</a>
+    <button [matMenuTriggerFor]="menu" class="navbar-toggler navbar-toggler-right"data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span> </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item><a class="nav-link " href="#about">About</a></button>
+      <button mat-menu-item><a class="nav-link " href="#services">Services</a></button>
+      <button mat-menu-item><a class="nav-link " href="#portfolio">Portfolio</a></button>
+      <button mat-menu-item><a class="nav-link " href="#contact">Contact</a></button>
+    </mat-menu>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto my-2 my-lg-0">
+        <li class="nav-item"><a class="nav-link " href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link " href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link " href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link " href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3"  style="background: white" *ngIf="!scroll">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">The Bridge</a>
+    <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+             aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>-->
+   <button [matMenuTriggerFor]="menu" class="navbar-toggler navbar-toggler-right"data-toggle="collapse"
+           data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+           aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span> </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item><a class="nav-link " href="#about">About</a></button>
+      <button mat-menu-item><a class="nav-link " href="#services">Services</a></button>
+      <button mat-menu-item><a class="nav-link " href="#portfolio">Portfolio</a></button>
+      <button mat-menu-item><a class="nav-link " href="#contact">Contact</a></button>
+    </mat-menu>
+    <div class="collapse navbar-collapse" >
+      <ul class="navbar-nav ml-auto my-2 my-lg-0">
+        <li class="nav-item"><a class="nav-link " href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Masthead-->
+<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center justify-content-center text-center">
+      <div class="col-lg-10 align-self-end">
+        <h1 class="title text-uppercase text-white font-weight-bold">The Bridge</h1>
+        <hr class="divider my-4"/>
+      </div>
+      <div class="col-lg-8 align-self-baseline">
+        <p class="text-white-75 font-weight-light mb-5">Start exchanging books between users so that everyone will be best leader, sign up now or later will be late</p>
+        <button class="signup " >Sign Up</button>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- About section-->
+<section class="about page-section" id="about">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="text-white mt-0">About Us</h2>
+        <hr class="divider light my-4"/>
+        <p class="text-white-50 mb-4">Start joining member in our page so that you will get the book that you want to read.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services section-->
+<section class="page-section" id="services">
+  <div class="container">
+    <h2 class="text-center mt-0">At Your Service</h2>
+    <hr class="divider my-4"/>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+          <h3 class="h4 mb-2">Sturdy Themes</h3>
+          <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+          <h3 class="h4 mb-2">Up to Date</h3>
+          <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+          <h3 class="h4 mb-2">Ready to Publish</h3>
+          <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+          <h3 class="h4 mb-2">Made with Love</h3>
+          <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Portfolio section-->
+  <section class="team-section text-center my-5 mt-3" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+          <h3 class="section-subheading text-muted">We are the member of The Bridge</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="../../../assets/image/team-photo/team1" alt="">
+            <h5>Thrichen Khentse</h5>
+            <p class="text-muted">Writer & QA</p>
+            <div class="text-center">
+              <span><fa-icon [icon]="facebook" class="facebook"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="insta" class="insta"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="twitter" class="twitter"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="mail" class="google"></fa-icon></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="../../../assets/image/team-photo/team2" alt="">
+            <h5>Pema Yangki</h5>
+            <p class="text-muted">UI</p>
+            <div class="text-center">
+              <span><fa-icon [icon]="facebook" class="facebook"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="insta" class="insta"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="twitter" class="twitter"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="mail" class="google"></fa-icon></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="../../../assets/image/team-photo/team4.jpg" alt="">
+            <h5>Gyeltshen Gympo</h5>
+            <p class="text-muted">UI & FE</p>
+            <div class="text-center">
+              <span><fa-icon [icon]="facebook" class="facebook"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="insta" class="insta"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="twitter" class="twitter"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="mail" class="google"></fa-icon></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="../../../assets/image/team-photo/team3" alt="">
+            <h5>Tshering Choki</h5>
+            <p class="text-muted">UI</p>
+              <div class="text-center">
+               <span><fa-icon [icon]="facebook" class="facebook"></fa-icon></span>
+                <span class="ml-2"> <fa-icon [icon]="insta" class="insta"></fa-icon></span>
+                <span class="ml-2"> <fa-icon [icon]="twitter" class="twitter"></fa-icon></span>
+                <span class="ml-2"> <fa-icon [icon]="mail" class="google"></fa-icon></span>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="../../../assets/image/team-photo/team5.jpg" alt="">
+            <h5>Chenten Norbu</h5>
+            <p class="text-muted">UX</p>
+            <div class="text-center">
+              <span><fa-icon [icon]="facebook" class="facebook"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="insta" class="insta"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="twitter" class="twitter"></fa-icon></span>
+              <span class="ml-2"> <fa-icon [icon]="mail" class="google"></fa-icon></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Contact Us</h2>
+          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form [formGroup]="contactUs" id="contactForm" name="sentMessage" novalidate="novalidate">
+            <div class="row">
+              <div class="col-md-6">
+
+                 <mat-form-field appearance="outline" style="width: 100%; height: 30px" type="text" class="mt-5">
+                   <mat-label>Nmae</mat-label>
+                   <input matInput formControlName="name" >
+                   <mat-error *ngIf="contactUs.get('name').hasError('required')">Name must</mat-error>
+                 </mat-form-field>
+
+
+                  <mat-form-field appearance="outline" style="width: 100%; height: 30px" type="text" class="mt-5">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" >
+                    <mat-error *ngIf="contactUs.get('email').hasError('required')">Email must</mat-error>
+                    <mat-error *ngIf="contactUs.get('email').hasError('pattern')">Email invalid</mat-error>
+                  </mat-form-field>
+
+                <mat-form-field appearance="outline" style="width: 100%; height: 30px" type="text"  class="mt-5">
+                  <mat-label>Phone</mat-label>
+                  <input matInput formControlName="phone" >
+                  <mat-error *ngIf="contactUs.get('phone').hasError('required')">Phone must</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field appearance="outline" style="width: 100%;" type="text"  class="mt-5">
+                  <mat-label>Message</mat-label>
+                  <textarea matInput style="height: 215px" formControlName="message"></textarea>
+                  <mat-error *ngIf="contactUs.get('message').hasError('required')">Message must</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" (click)="onSendContact()">Send Message</button>
+              </div>
+            </div>
+            <notifier-container></notifier-container>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Footer-->
+<footer class="bg-light py-5">
+  <div class="container">
+    <div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div>
+  </div>
+</footer>
+</div>

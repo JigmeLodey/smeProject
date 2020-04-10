@@ -8,20 +8,26 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {HttpClientModule} from '@angular/common/http';
 import {NotifierModule} from 'angular-notifier';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
     NgbModule,
     HttpClientModule,
     AppRoutingModule,
+    FontAwesomeModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
     NotifierModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
