@@ -8,6 +8,7 @@ import validate = WebAssembly.validate;
 import {DesktopService} from './desktop.service';
 import {NotifierService} from 'angular-notifier';
 import {makeEs5TranslatePlugin} from '@angular/localize/src/tools/src/translate/source_files/es5_translate_plugin';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-desktop',
@@ -23,7 +24,7 @@ export class DesktopComponent implements OnInit {
   contactUs: FormGroup;
   private readonly notifier: NotifierService;
 
-  constructor(private formBuilder: FormBuilder, private service: DesktopService, private notifierService: NotifierService) {
+  constructor(private formBuilder: FormBuilder, private service: DesktopService, private notifierService: NotifierService, private route: Router) {
     this.notifier = notifierService;
   }
 
@@ -61,5 +62,9 @@ export class DesktopComponent implements OnInit {
     } else {
       this.notifier.notify('error', 'Empty message cannot be send');
     }
+  }
+
+  onSignin() {
+    this.route.navigate(['../auth']);
   }
 }
