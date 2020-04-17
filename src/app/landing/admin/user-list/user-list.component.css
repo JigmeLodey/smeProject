@@ -1,0 +1,21 @@
+.main{
+  padding: 20px;
+}
+.search-form-field{
+  width: 300px;
+  padding-left: 25px;
+}
+.search_div{
+  padding: 10px;
+}
+.search-form-field{
+  padding-left: 10px;
+}
+.add_user{
+  height: 50px;
+  border-radius: 10px;
+}
+.card-header{
+  color: #666666;
+  font-size: 20px;
+}

@@ -1,0 +1,173 @@
+<div id="layoutSidenav_content">
+  <div class="container-fluid">
+    <div class="mt-4 row">
+      <div class="col-xl-3 col-md-6">
+        <div class="card bg-primary text-white mb-4">
+          <div class="card-body"><mat-icon class="align-text-bottom" style="font-size: 30px">people</mat-icon> <span class="ml-2">User Registered</span><span class="ml-3">{{this.userLength}}</span> </div>
+          <div class="card-footer d-flex align-items-center justify-content-between">
+            <div class="small text-white stretched-link" style="cursor: pointer" (click)="nav('user')">View Details</div>
+            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6">
+        <div class="card bg-warning text-white mb-4">
+          <div class="card-body"><mat-icon class="align-text-bottom" style="font-size: 30px">mail</mat-icon><span class="ml-2"> User Contact </span> <span class="ml-3">{{this.contactLength}}</span></div>
+          <div class="card-footer d-flex align-items-center justify-content-between">
+            <div class="small text-white stretched-link" style="cursor: pointer" (click)="nav('contact')">View Details</div>
+            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6">
+        <div class="card bg-success text-white mb-4">
+          <div class="card-body"><mat-icon class="align-text-bottom" style="font-size: 30px">add</mat-icon><span class="ml-2"> User Subscribe </span> <span class="ml-3">{{this.subscribeLength}}</span></div>
+          <div class="card-footer d-flex align-items-center justify-content-between">
+            <div class="small text-white stretched-link" style="cursor: pointer" (click)="nav('user')">View Details</div>
+            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6">
+        <div class="card bg-danger text-white mb-4">
+          <div class="card-body"><mat-icon class="align-text-bottom" style="font-size: 30px">public</mat-icon><span class="ml-2"> User Post </span> <span class="ml-3">{{this.postLength}}</span></div>
+          <div class="card-footer d-flex align-items-center justify-content-between">
+            <div class="small text-white stretched-link" style="cursor: pointer" (click)="nav('post')">View Details</div>
+            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="card mb-4">
+          <div class="card-header">
+            Book Chart
+          </div>
+          <div class="card-body" style="padding: 10px 0 0;">
+            <ngx-charts-bar-vertical class="chart-wrapper"
+              [results]="single"
+              [view]=[500,250]
+              [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75' ] }"
+              [barPadding]="10"
+              [gradient]="true"
+              [xAxis]="true"
+              [yAxis]="true"
+              [legend]="true"
+              [legendTitle]="'Legenda'"
+              [xAxisLabel]="'Types'"
+              [yAxisLabel]="' Donation'"
+              [showXAxisLabel]="true"
+              [showYAxisLabel]="true">
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="card mb-4">
+          <div class="card-header"><i class="fas fa-chart-bar mr-1"></i>Bar Chart Example</div>
+          <div class="card-body">
+            <ngx-charts-bar-vertical class="chart-wrapper"
+                                     [results]="books"
+                                     [view]=[500,250]
+                                     [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75' ] }"
+                                     [barPadding]="10"
+                                     [gradient]="true"
+                                     [xAxis]="true"
+                                     [yAxis]="true"
+                                     [legend]="true"
+                                     [legendTitle]="'Legenda'"
+                                     [xAxisLabel]="'Types'"
+                                     [yAxisLabel]="'Books'"
+                                     [showXAxisLabel]="true"
+                                     [showYAxisLabel]="true"
+            >
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="card mb-4">
+          <div class="card-header"><i class="fas fa-chart-bar mr-1"></i>Subscriber List</div>
+          <div class="card-body" style="padding: 10px">
+            <div class="container table-responsive">
+              <table class="table table-bordered" width="100%" cellspacing="0" style="height: 30px; overflow-y: scroll">
+                <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Email</th>
+                </tr>
+                </thead>
+                <tbody *ngFor="let sub of subscribe; let i = index">
+                <tr class="success" *ngIf="i<=5">
+                  <td>{{i+1}}</td>
+                  <td>{{sub.email}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="card mb-4">
+          <div class="card-header"><i class="fas fa-chart-bar mr-1"></i>Contact List</div>
+          <div class="card-body" style="padding: 10px">
+            <div class="container table-responsive">
+              <table class="table table-bordered" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Messages</th>
+                </tr>
+                </thead>
+                <tbody *ngFor="let con of contact; let i = index">
+                <tr class="success">
+                  <td>{{i+1}}</td>
+                  <td>{{con.name}}</td>
+                  <td>{{con.email}}</td>
+                  <td>{{con.phone}}</td>
+                  <td style="overflow: scroll;">{{con.message}}</td>
+                </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 tm-block-col">
+      <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+       <div class="card-header">Users List</div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Role</th>
+          </tr>
+          </thead>
+          <tbody *ngFor="let val of user; let i = index">
+          <tr>
+            <th scope="row"><b>{{i+1}}</b></th>
+            <td><b>{{val.name}}</b></td>
+            <td>{{val.email}}</td>
+            <td>{{val.gender}}</td>
+            <td>{{val.number}}</td>
+            <td>{{val.role}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-header">
+    Add Users
+  </div>
+  <div class="card-body">
+    <div class="container" [formGroup]="addUserForm">
+        <div class="row">
+          <div class="col-sm-6">
+            <mat-form-field>
+              <mat-label>Name</mat-label>
+              <input matInput autocomplete="off" formControlName="name">
+              <mat-error *ngIf="addUserForm.get('name').hasError('required')">Name Required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-6">
+           <mat-form-field>
+             <mat-label>Gender</mat-label>
+             <mat-select formControlName="gender">
+               <mat-option value="Male">Male</mat-option>
+               <mat-option value="Female">Female</mat-option>
+               <mat-option value="Other">Other</mat-option>
+             </mat-select>
+             <mat-error *ngIf="addUserForm.get('gender').hasError('required')">Gender Required</mat-error>
+           </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <mat-form-field>
+              <mat-label>Phone</mat-label>
+              <input matInput type="number" autocomplete="off" formControlName="number">
+              <mat-error *ngIf="addUserForm.get('number').hasError('required')">Phone Required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-6">
+            <mat-form-field>
+              <mat-label>Role</mat-label>
+              <mat-select formControlName="role">
+                <mat-option value="member">Member</mat-option>
+                <mat-option value="admin">Admin</mat-option>
+              </mat-select>
+              <mat-error *ngIf="addUserForm.get('role').hasError('required')">Role Required</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="email">
+          <mat-form-field class="email">
+            <mat-label>Email</mat-label>
+            <input matInput autocomplete="off" formControlName="email">
+            <mat-error *ngIf="addUserForm.get('email').hasError('required')">Email Required</mat-error>
+          </mat-form-field>
+        </div>
+        <button class="btn btn-primary" mat-raised-button (click)="addUser()">
+          Add
+        </button>
+    </div>
+    <notifier-container></notifier-container>
+  </div>
+</div>
