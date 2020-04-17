@@ -1,1 +1,94 @@
-<p>admin works!</p>
+<mat-drawer-container class="matContainer" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+      <div class="sb-sidenav-menu">
+        <div class="nav">
+          <div class="top-header sb-sidenav-menu-heading">The Bridge</div>
+          <div class="nav-link mt-3" (click)="nav('dashboard')">
+            <div class="sb-nav-link-icon">
+              <mat-icon>dashboard</mat-icon>
+            </div>
+            Dashboard
+          </div>
+          <div class="nav-link" (click)="nav('feed')">
+            <div class="sb-nav-link-icon">
+              <mat-icon>rss_feed</mat-icon>
+            </div>
+            Feeds
+          </div>
+          <div class="nav-link" (click)="nav('users')">
+            <div class="sb-nav-link-icon">
+              <mat-icon>people</mat-icon>
+            </div>
+            Users
+          </div>
+          <div class="nav-link" (click)="nav('post')">
+            <div class="sb-nav-link-icon">
+              <mat-icon>public</mat-icon>
+            </div>
+            User Post
+          </div>
+          <div class="nav-link" (click)="nav('addBook')">
+            <div class="sb-nav-link-icon">
+              <mat-icon>library_add</mat-icon>
+            </div>
+            Add Book
+          </div>
+          <div class="sb-sidenav-menu-heading">Books</div>
+          <div class="nav-link " (click)="nav('bookRoll')">
+            <div class="sb-nav-link-icon"><mat-icon>swap_horiz</mat-icon></div>
+            Book Roll
+            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+          </div>
+          <div class="nav-link collapsed" (click)="nav('bookDonate')">
+            <div class="sb-nav-link-icon"><mat-icon>book</mat-icon></div>
+            Book Donate
+          </div>
+
+          <div class="sb-sidenav-menu-heading">Donation</div>
+          <div class="nav-link" (click)="nav('addDonation')">
+            <div class="sb-nav-link-icon"><mat-icon>monetization_on</mat-icon></div>
+            Donation
+          </div>
+        </div>
+      </div>
+      <div class="sb-sidenav-footer">
+        <div class="small">Logged in as:</div>
+       The Bridge admin
+      </div>
+    </nav>
+  </mat-drawer>
+  <nav class="navbar navbar-expand-lg navbar-light" style="padding: 0 25px 0 0; background: #00001f">
+    <button class="menu" (click)="drawer.toggle(); menu()">
+      <mat-icon *ngIf="!showLeft">keyboard_arrow_right</mat-icon>
+      <mat-icon *ngIf="showLeft">keyboard_arrow_left</mat-icon>
+    </button>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <span class="title nav-link" style="color: #666666; font-size: 25px">  The Bridge</span>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0 mr-4">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <div class="avatar">
+        <img src="../../../assets/image/others/male.png" class="embed-responsive" [matMenuTriggerFor]="menus">
+        <mat-menu #menus="matMenu">
+          <span mat-menu-item><mat-icon>logout</mat-icon> Log Out</span>
+          <span mat-menu-item><mat-icon>delete</mat-icon> Delete Account</span>
+        </mat-menu>
+
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</mat-drawer-container>

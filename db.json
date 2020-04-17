@@ -1,17 +1,62 @@
 {
   "auth": [
     {
-      "id": 1,
-      "name": "thebridge",
-      "email": "admin@thebridge.com",
-      "password": "admin@2020",
-      "role": "admin"
+      "name": "Testing",
+      "gender": "Female",
+      "number": 121212,
+      "role": "member",
+      "email": "test@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "Jigme",
+      "gender": "Male",
+      "number": 17171717,
+      "role": "member",
+      "email": "lodey@gmail.com",
+      "id": 9
+    },
+    {
+      "name": "Jigme",
+      "gender": "Male",
+      "number": 121212,
+      "role": "member",
+      "email": "kool@gmail.com",
+      "id": 10
+    },
+    {
+      "name": "Testing",
+      "gender": "Male",
+      "number": 121212,
+      "role": "member",
+      "email": "testing@gmail.com",
+      "id": 11
+    },
+    {
+      "name": "Test",
+      "gender": "Male",
+      "number": 1234567,
+      "role": "member",
+      "email": "sleepy@gmail.com",
+      "id": 12
+    },
+    {
+      "name": "Testing",
+      "gender": "Male",
+      "number": 12121212,
+      "role": "member",
+      "email": "workingihope@gmail.com",
+      "id": 13
     }
   ],
   "request": [
     {
       "id": 1,
-      "email": "email"
+      "email": "jigme@gmail.com"
+    },
+    {
+      "id": 2,
+      "email": "lodey@gmail.com"
     }
   ],
   "contact": [
@@ -19,9 +64,72 @@
       "id": 1,
       "name": "sdnsdn",
       "email": "fyda@gmail.com",
-      "phone": "3e",
+      "phone": "77455740",
       "message": "dsmnsdnfsdnfsmdfn"
     }
-
+  ],
+  "donation": [
+    {
+      "id": 1,
+      "name": "book",
+      "value": 30
+    },
+    {
+      "id": 2,
+      "name": "clouts",
+      "value": 20
+    },
+    {
+      "id": 3,
+      "name": "Foot wares",
+      "value": 15
+    },
+    {
+      "id": 4,
+      "name": "electronic",
+      "value": 3
+    },
+    {
+      "id": 5,
+      "name": "others",
+      "value": 50
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "Science Fiction",
+      "value": 30
+    },
+    {
+      "id": 2,
+      "name": "Action",
+      "value": 20
+    },
+    {
+      "id": 3,
+      "name": "Romance",
+      "value": 15
+    },
+    {
+      "id": 4,
+      "name": "Horror",
+      "value": 3
+    },
+    {
+      "id": 5,
+      "name": "others",
+      "value": 50
+    }
+  ],
+  "subscribe": [
+    {
+      "id": 1,
+      "email": "the_bridge@gmail.com"
+    },
+    {
+      "id": 1,
+      "email": "thebridge@gmail.com"
+    }
   ]
 }
