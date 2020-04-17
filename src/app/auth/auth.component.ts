@@ -60,17 +60,17 @@ export class AuthComponent implements OnInit {
   }
 
   home(): void {
-  this.route.navigate(['/']);
+    this.route.navigate(['/']);
   }
 
   onSubmit(): void {
-   if (this.forgotForm.valid) {
-     this.service.onRequest(this.forgotForm.value).subscribe(response => {
-       if (response) {
-         this.notifier.notify('success', 'Request Sent');
-       }
-     });
-   }
+    if (this.forgotForm.valid) {
+      this.service.onRequest(this.forgotForm.value).subscribe(response => {
+        if (response) {
+          this.notifier.notify('success', 'Request Sent');
+        }
+      });
+    }
   }
 
   onLogin(): void {
@@ -131,6 +131,7 @@ export class AuthComponent implements OnInit {
           }
         }
         if (this.SignUpChecker) {
+          this.signUpForm.value.name = this.signUpForm.value.name.charAt([0]).toUpperCase() + this.signUpForm.value.name.slice(1);
           this.service.onPostSignUp(this.signUpForm.value).subscribe(response => {
             if (response) {
               this.signUpClick = false;

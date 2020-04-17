@@ -7,17 +7,19 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {NotifierModule} from 'angular-notifier';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
   declarations: [AuthComponent],
-  imports: [
-    CommonModule,
-    AuthRoutingModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    NotifierModule
-  ]
+    imports: [
+        CommonModule,
+        AuthRoutingModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        NotifierModule,
+        MatSelectModule
+    ]
 })
 export class AuthModule { }
