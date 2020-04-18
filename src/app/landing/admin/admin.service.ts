@@ -34,8 +34,8 @@ export class AdminService {
     return this.http.post(' http://localhost:3000/auth', value);
   }
 
-  getUserById(id: any) {
-    return this.http.get(` http://localhost:3000/auth/${id}`);
+  getPost() {
+    return this.http.get(` http://localhost:3000/post`);
   }
 
   getEmail() {
@@ -44,5 +44,19 @@ export class AdminService {
 
   onDelete(id) {
     return this.http.delete(` http://localhost:3000/auth/${id}`);
+  }
+
+  onDeleteSub(id: number) {
+    return this.http.delete(`http://localhost:3000/subscribe/${id}`);
+  }
+  onDeleteRes(id: number) {
+    return this.http.delete(`http://localhost:3000/request/${id}`);
+  }
+  getUserByID(id) {
+    return this.http.get(`http://localhost:3000/auth/${id}`);
+  }
+
+  onUpdate(id, value: any) {
+    return this.http.put(`http://localhost:3000/auth/${id}`, value);
   }
 }

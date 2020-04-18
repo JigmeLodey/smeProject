@@ -34,6 +34,7 @@ export class DashboardComponent implements OnInit {
     this.getUser();
     this.getSubscribes();
     this.getContact();
+    this.getPost();
   }
 
   donationGraph(): void {
@@ -51,20 +52,23 @@ export class DashboardComponent implements OnInit {
   }
 
   getUser(): void {
-    this.service.getSubscribe().subscribe(res => {
+    this.service.getUser().subscribe(res => {
       this.user = res;
       this.userLength = Object.keys(res).length;
-      this.subscribeLength = Object.keys(res).length;
     });
   }
 
   getSubscribes(): void {
     this.service.getSubscribe().subscribe(res => {
       this.subscribe = res;
-      this.postLength = Object.keys(res).length;
+      this.subscribeLength = Object.keys(res).length;
     });
   }
-
+  getPost(): void{
+  this.service.getPost().subscribe(res => {
+    this.postLength = Object.keys(res).length;
+  });
+  }
   getContact(): void {
     this.service.getContact().subscribe(res => {
       this.contact = res;

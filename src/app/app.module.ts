@@ -13,6 +13,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {AddUserComponent} from './landing/admin/user-list/add-user/add-user.component';
 import {MatSelectModule} from '@angular/material/select';
 import {ReactiveFormsModule} from '@angular/forms';
+import {EditUserComponent} from './landing/admin/user-list/edit-user/edit-user.component';
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AddUserComponent]
+  entryComponents: [AddUserComponent, EditUserComponent]
 })
 export class AppModule {
 }

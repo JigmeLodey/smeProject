@@ -35,7 +35,8 @@ export class AddUserComponent implements OnInit {
       gender: [undefined, Validators.required],
       number: [undefined, Validators.required],
       role: [undefined, Validators.required],
-      email: [undefined, Validators.required]
+      email: [undefined, Validators.required],
+      password: ['the_bridge']
     });
   }
 

@@ -1,0 +1,67 @@
+<div class="card">
+  <div class="card-header">
+    Add Users
+  </div>
+  <div class="card-body">
+    <div class="container" [formGroup]="editeUserForm">
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput autocomplete="off" formControlName="name">
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option value="Male">Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+              <mat-option value="Other">Other</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Phone</mat-label>
+            <input matInput type="number" autocomplete="off" formControlName="number" >
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field>
+            <mat-label>Role</mat-label>
+            <mat-select formControlName="role">
+              <mat-option value="member">Member</mat-option>
+              <mat-option value="admin">Admin</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="email">
+            <mat-form-field class="email">
+              <mat-label>Email</mat-label>
+              <input matInput autocomplete="off" formControlName="email" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <mat-form-field>
+              <mat-label>Status</mat-label>
+              <mat-select formControlName="status" >
+                <mat-option value="allow">Allow</mat-option>
+                <mat-option value="block">Block</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+      </div>
+      <button class="btn btn-primary" mat-raised-button (click)="onSave()">
+       Save
+      </button>
+    </div>
+    <notifier-container></notifier-container>
+  </div>
+</div>

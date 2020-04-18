@@ -12,7 +12,7 @@
           <mat-table [dataSource]="listDataEmails">
             <ng-container matColumnDef="id">
               <mat-header-cell *matHeaderCellDef>No.</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{element.id}}</mat-cell>
+              <mat-cell *matCellDef="let element; let i = index">{{i+1}}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="email">
               <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
@@ -20,9 +20,8 @@
             </ng-container>
             <ng-container matColumnDef="actions">
               <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
-              <mat-cell *matCellDef="let element">
-                <button mat-icon-button ><mat-icon>launch</mat-icon></button>
-                <button mat-icon-button><mat-icon>delete_outline</mat-icon></button>
+              <mat-cell *matCellDef="let element; let i = index">
+                <button mat-icon-button (click)="onDelete(element.id, i, 'request')"><mat-icon>delete_outline</mat-icon></button>
               </mat-cell>
             </ng-container>
             <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
@@ -37,7 +36,7 @@
           <mat-table [dataSource]="listDataSubsciber">
             <ng-container matColumnDef="id">
               <mat-header-cell *matHeaderCellDef>No.</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{element.id}}</mat-cell>
+              <mat-cell *matCellDef="let element; let i = index">{{i+1}}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="email">
               <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
@@ -45,9 +44,9 @@
             </ng-container>
             <ng-container matColumnDef="actions">
               <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
-              <mat-cell *matCellDef="let element">
-                <button mat-icon-button ><mat-icon>launch</mat-icon></button>
-                <button mat-icon-button><mat-icon>delete_outline</mat-icon></button>
+              <mat-cell *matCellDef="let element; let i= index">
+
+                <button mat-icon-button><mat-icon (click)="onDelete(element.id, i, 'sub')">delete_outline</mat-icon></button>
               </mat-cell>
             </ng-container>
             <mat-header-row *matHeaderRowDef="displayColumn3"></mat-header-row>
@@ -93,11 +92,15 @@
           <mat-header-cell *matHeaderCellDef mat-sort-header>Role</mat-header-cell>
           <mat-cell *matCellDef="let element">{{element.role}}</mat-cell>
         </ng-container>
+        <ng-container matColumnDef="status">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.status}}</mat-cell>
+        </ng-container>
         <ng-container matColumnDef="action">
-          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
           <mat-cell *matCellDef="let element; let i = index">
-            <button mat-icon-button (click)="onEdit(element.id)"><mat-icon>launch</mat-icon></button>
-            <button mat-icon-button (click)="onDelete(element.id, i)"><mat-icon>delete_outline</mat-icon></button>
+            <button mat-icon-button (click)="onEdit(element.id, i)"><mat-icon>launch</mat-icon></button>
+            <button mat-icon-button (click)="onDelete(element.id, i, 'user')" class="text-danger"><mat-icon>delete_outline</mat-icon></button>
           </mat-cell>
         </ng-container>
         <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>

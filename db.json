@@ -1,27 +1,22 @@
 {
   "auth": [
     {
-      "name": "Testing",
-      "gender": "Female",
-      "number": 121212,
-      "role": "member",
-      "email": "test@gmail.com",
-      "id": 8
-    },
-    {
       "name": "Jigme",
-      "gender": "Male",
+      "email": "lodey@gmail.coms",
       "number": 17171717,
       "role": "member",
-      "email": "lodey@gmail.com",
+      "gender": "Male",
+      "status": "allow",
       "id": 9
     },
     {
       "name": "Jigme",
       "gender": "Male",
       "number": 121212,
+      "status": "allow",
       "role": "member",
       "email": "kool@gmail.com",
+      "password": "the_bridge123",
       "id": 10
     },
     {
@@ -29,33 +24,32 @@
       "gender": "Male",
       "number": 121212,
       "role": "member",
+      "status": "allow",
       "email": "testing@gmail.com",
+      "password": "the_bridge123",
       "id": 11
     },
     {
-      "name": "Test",
-      "gender": "Male",
+      "name": "Tests",
+      "email": "sleepy@gmail.com",
       "number": 1234567,
       "role": "member",
-      "email": "sleepy@gmail.com",
-      "id": 12
-    },
-    {
-      "name": "Testing",
       "gender": "Male",
-      "number": 12121212,
-      "role": "member",
-      "email": "workingihope@gmail.com",
-      "id": 13
+      "status": "allow",
+      "id": 12
     }
   ],
   "request": [
     {
       "id": 1,
-      "email": "jigme@gmail.com"
+      "email": "lodey@gmail.com"
     },
     {
       "id": 2,
+      "email": "lodey@gmail.com"
+    },
+    {
+      "id": 3,
       "email": "lodey@gmail.com"
     }
   ],
@@ -125,11 +119,21 @@
   "subscribe": [
     {
       "id": 1,
-      "email": "the_bridge@gmail.com"
+      "email": "drukbit@gmail.com"
     },
     {
+      "id": 2,
+      "email": "lodey@gmail.com"
+    },
+    {
+      "id": 3,
+      "email": "lodey@gmail.com"
+    }
+  ],
+  "post": [
+    {
       "id": 1,
-      "email": "thebridge@gmail.com"
+      "feed": "hello"
     }
   ]
 }

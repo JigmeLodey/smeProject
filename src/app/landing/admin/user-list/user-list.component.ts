@@ -6,7 +6,8 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {AddUserComponent} from './add-user/add-user.component';
 import {UserListStateService} from './user-list.state.service';
-import {FormArray, FormGroup} from '@angular/forms';
+import {EditUserComponent} from './edit-user/edit-user.component';
+import {EditUserStateService} from './edit-user/edit-user.state.service';
 
 @Component({
   selector: 'app-user-list',
@@ -18,11 +19,12 @@ export class UserListComponent implements OnInit {
   subscriber: any;
   emails: any;
   lengths: number;
+  editId: any;
   checker: any;
   searchKey: string;
   listData: MatTableDataSource<any>;
   listDataEmails: MatTableDataSource<any>;
-  displayColumn: string[] = ['id', 'name', 'email', 'gender', 'number', 'role', 'action'];
+  displayColumn: string[] = ['id', 'name', 'email', 'gender', 'number', 'role', 'status', 'action'];
   displayColumns: string[] = ['id', 'email', 'actions'];
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild('paginator') paginator: MatPaginator;
@@ -32,7 +34,10 @@ export class UserListComponent implements OnInit {
   displayColumn3: string[] = ['id', 'email', 'actions'];
 
 
-  constructor(private service: AdminService, public dialog: MatDialog, private state: UserListStateService) {
+  constructor(private service: AdminService,
+              public dialog: MatDialog,
+              private state: UserListStateService,
+              private editState: EditUserStateService) {
   }
 
   ngOnInit(): void {
@@ -40,6 +45,7 @@ export class UserListComponent implements OnInit {
     this.getEmail();
     this.getSubscriber();
     this.getUserUpdate();
+    this.onUpdate();
   }
 
   getUsers(): void {
@@ -69,15 +75,31 @@ export class UserListComponent implements OnInit {
     this.dialog.open(AddUserComponent, dialogConfig);
   }
 
-  onEdit(row: any) {
-    console.log(row);
+  onEdit(id: any, eId) {
+    /*this.editState.updatetotalUser(id);*/
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.data = id;
+    this.dialog.open(EditUserComponent, dialogConfig);
+    this.editId = eId;
   }
 
-  onDelete(id: number, i) {
-    const data = this.listData.data;
-    data.splice((this.paginator.pageIndex * this.paginator.pageSize) + i, 1);
-    this.listData.data = data;
-    this.service.onDelete(id).subscribe(res => res);
+  onDelete(id: number, i, value) {
+    if (value === 'user') {
+      const data = this.listData.data;
+      data.splice((this.paginator.pageIndex * this.paginator.pageSize) + i, 1);
+      this.listData.data = data;
+      this.service.onDelete(id).subscribe(res => res);
+    } else if (value === 'sub') {
+      const data = this.listDataSubsciber.data;
+      data.splice((this.paginator3.pageIndex * this.paginator3.pageSize) + i, 1);
+      this.listDataSubsciber.data = data;
+      this.service.onDeleteSub(id).subscribe(res => res);
+    } else {
+      const data = this.listDataEmails.data;
+      data.splice((this.paginator2.pageIndex * this.paginator2.pageSize) + i, 1);
+      this.listDataEmails.data = data;
+      this.service.onDeleteRes(id).subscribe(res => res);
+    }
   }
 
   getEmail() {
@@ -95,11 +117,19 @@ export class UserListComponent implements OnInit {
       this.listDataSubsciber.paginator = this.paginator3;
     });
   }
+
   getUserUpdate() {
     this.state.totalUsers.subscribe(res => {
       const data = this.listData.data;
       data.push(res);
       this.listData.data = data;
+    });
+  }
+
+  private onUpdate() {
+    this.state.Users.subscribe(res => {
+      this.listData.data[this.editId] = res;
+      console.log(this.editId);
     });
   }
 }

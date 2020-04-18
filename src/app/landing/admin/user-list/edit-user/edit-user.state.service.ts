@@ -5,21 +5,16 @@ import {Subject} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserListStateService {
+export class EditUserStateService {
   private userValue = new Subject();
   constructor() {
   }
 
   updatetotalUser(total) {
+    console.log('state' +  total)
     return this.userValue.next(total);
   }
   get totalUsers() {
-    return this.userValue.asObservable();
-  }
-  updatteUser(total) {
-    return this.userValue.next(total);
-  }
-  get Users() {
     return this.userValue.asObservable();
   }
 }

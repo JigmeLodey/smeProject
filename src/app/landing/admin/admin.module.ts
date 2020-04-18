@@ -26,6 +26,7 @@ import {MatInputModule} from '@angular/material/input';
 import { AddUserComponent } from './user-list/add-user/add-user.component';
 import {MatSelectModule} from '@angular/material/select';
 import {NotifierModule} from 'angular-notifier';
+import { EditUserComponent } from './user-list/edit-user/edit-user.component';
 
 
 
@@ -44,6 +45,7 @@ import {NotifierModule} from 'angular-notifier';
     AddDonationComponent,
     DonationComponent,
     AddUserComponent,
+    EditUserComponent,
     ],
   imports: [
     CommonModule,
