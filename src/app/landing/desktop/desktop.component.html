@@ -53,7 +53,8 @@
         <hr class="divider my-4"/>
       </div>
       <div class="col-lg-8 align-self-baseline">
-        <p class="text-white-75 font-weight-light mb-5">Start exchanging books between users so that everyone will be best leader, sign up now or later will be late</p>
+        <p class="text-white-75 font-weight-light mb-5">Start exchanging books between users so that everyone
+           will be best leader, sign up now or later will be late</p>
         <button class="signup " (click)="onSignin()">Sign In</button>
       </div>
     </div>
@@ -66,7 +67,14 @@
       <div class="col-lg-8 text-center">
         <h2 class="text-white mt-0">About Us</h2>
         <hr class="divider light my-4"/>
-        <p class="text-white-50 mb-4">Start joining member in our page so that you will get the book that you want to read.</p>
+        <p class="text-white-50 mb-4">The Bridge’ is a concept based on book rolling that enables enthusiastic 
+          readers to bring in unused or read books from home to swap or donate. Moreover, we have also donation
+           services for donating goods such as clothing, toys, food or vehicles. We have initiated this project 
+           o encourage more readers and help the needy ones as well.
+          The sole purpose of ‘The Bridge’ is to act as a bridge between the enthusiastic readers and guide
+           them to a destination where the reading of books and donating things will be made easily accessible.
+            Furthermore, to specifically encourage them.
+          </p>
       </div>
     </div>
   </div>
@@ -203,7 +211,7 @@
               <div class="col-md-6">
 
                  <mat-form-field appearance="outline" style="width: 100%; height: 30px" type="text" class="mt-5">
-                   <mat-label>Nmae</mat-label>
+                   <mat-label>Name</mat-label>
                    <input matInput formControlName="name" >
                    <mat-error *ngIf="contactUs.get('name').hasError('required')">Name must</mat-error>
                  </mat-form-field>
