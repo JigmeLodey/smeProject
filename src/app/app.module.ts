@@ -14,6 +14,8 @@ import {AddUserComponent} from './landing/admin/user-list/add-user/add-user.comp
 import {MatSelectModule} from '@angular/material/select';
 import {ReactiveFormsModule} from '@angular/forms';
 import {EditUserComponent} from './landing/admin/user-list/edit-user/edit-user.component';
+import {AddBookComponent} from './landing/admin/add-book/add-book.component';
+import {AddDialogComponent} from './landing/admin/add-book/add-dialog/add-dialog.component';
 
 
 @NgModule({
@@ -44,7 +46,7 @@ import {EditUserComponent} from './landing/admin/user-list/edit-user/edit-user.c
 
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AddUserComponent, EditUserComponent]
+  entryComponents: [AddUserComponent, EditUserComponent, AddDialogComponent]
 })
 export class AppModule {
 }

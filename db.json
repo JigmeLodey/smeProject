@@ -30,13 +30,24 @@
       "id": 11
     },
     {
-      "name": "Tests",
-      "email": "sleepy@gmail.com",
-      "number": 1234567,
-      "role": "member",
+      "name": "DrukBit",
       "gender": "Male",
+      "number": 17171717,
+      "role": "member",
+      "email": "drukbit@gmail.com",
+      "password": "the_bridge",
       "status": "allow",
       "id": 12
+    },
+    {
+      "name": "Bhutan",
+      "gender": "Male",
+      "number": 171717171,
+      "role": "admin",
+      "email": "bhutan@gmail.com",
+      "password": "the_bridge",
+      "status": "allow",
+      "id": 13
     }
   ],
   "request": [
@@ -50,12 +61,23 @@
     },
     {
       "id": 3,
-      "email": "lodey@gmail.com"
+      "email": "kodoy@gmail.com"
+    },
+    {
+      "id": 4,
+      "email": "today@gmail.com"
     }
   ],
   "contact": [
     {
       "id": 1,
+      "name": "sdnsdn",
+      "email": "fyda@gmail.com",
+      "phone": "77455740",
+      "message": "dsmnsdnfsdnfsmdfn"
+    },
+    {
+      "id": 2,
       "name": "sdnsdn",
       "email": "fyda@gmail.com",
       "phone": "77455740",
@@ -127,13 +149,59 @@
     },
     {
       "id": 3,
-      "email": "lodey@gmail.com"
+      "email": "jiy@gmail.com"
+    },
+    {
+      "id": 4,
+      "email": "test@gmail.com"
     }
   ],
   "post": [
     {
       "id": 1,
-      "feed": "hello"
+      "userId": "9",
+      "feed": "hello",
+      "gender": "Male"
+    },
+    {
+      "id": 2,
+      "userId": "10",
+      "feed": "hello",
+      "gender": "Female"
+    },
+    {
+      "id": 3,
+      "userId": "10",
+      "feed": "hello",
+      "gender": "Male"
+    },
+    {
+      "id": 4,
+      "userId": "10",
+      "feed": "hello",
+      "gender": "Male"
+    },
+    {
+      "id": 5,
+      "userId": "10",
+      "feed": "heillo",
+      "gender": "Male"
+    }
+  ],
+  "bookStore": [
+    {
+      "id": 1,
+      "name": "Testing",
+      "author": "Tester",
+      "genre": "Test",
+      "type": "Donated"
+    },
+    {
+      "id": 2,
+      "name": "Who",
+      "author": "Tester",
+      "genre": "Test",
+      "type": "Rolled"
     }
   ]
 }

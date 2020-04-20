@@ -36,7 +36,8 @@ export class AddUserComponent implements OnInit {
       number: [undefined, Validators.required],
       role: [undefined, Validators.required],
       email: [undefined, Validators.required],
-      password: ['the_bridge']
+      password: ['the_bridge'],
+      status: ['allow']
     });
   }
 

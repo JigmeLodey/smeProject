@@ -27,6 +27,9 @@ import { AddUserComponent } from './user-list/add-user/add-user.component';
 import {MatSelectModule} from '@angular/material/select';
 import {NotifierModule} from 'angular-notifier';
 import { EditUserComponent } from './user-list/edit-user/edit-user.component';
+import {AdminShareModule} from './admin-share/admin-share.module';
+import { AdminFeedsComponent } from './admin-feeds/admin-feeds.component';
+import { AddDialogComponent } from './add-book/add-dialog/add-dialog.component';
 
 
 
@@ -46,26 +49,29 @@ import { EditUserComponent } from './user-list/edit-user/edit-user.component';
     DonationComponent,
     AddUserComponent,
     EditUserComponent,
+    AdminFeedsComponent,
+    AddDialogComponent,
     ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    NgxChartsModule,
-    MatMenuModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatToolbarModule,
-    FormsModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    NotifierModule
-  ],
+    imports: [
+        CommonModule,
+        AdminRoutingModule,
+        NgxChartsModule,
+        MatMenuModule,
+        MatIconModule,
+        MatSidenavModule,
+        MatButtonModule,
+        MatToolbarModule,
+        FormsModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatSelectModule,
+        NotifierModule,
+        AdminShareModule
+    ],
   exports: [
     MatSelectModule
   ]

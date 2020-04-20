@@ -22,7 +22,7 @@ export class AdminComponent implements OnInit {
     if (value === 'dashboard') {
       this.route.navigate(['./admin']);
     } else if (value === 'feed') {
-
+      this.route.navigate(['./admin/feeds']);
     } else if (value === 'users') {
       this.route.navigate(['./admin/user']);
     } else if (value === 'post') {

@@ -10,6 +10,7 @@ import {BookDonateComponent} from './book-donate/book-donate.component';
 import {BookRollComponent} from './book-roll/book-roll.component';
 import {AddDonationComponent} from './add-donation/add-donation.component';
 import {DonationComponent} from './donation/donation.component';
+import {AdminFeedsComponent} from './admin-feeds/admin-feeds.component';
 
 
 
@@ -22,8 +23,10 @@ const routes: Routes = [
       {path: '', component: DashboardComponent},
       {path: 'bookdonation', component: BookDonateComponent},
       {path: 'bookroll', component: BookRollComponent},
-      {path: 'store', component: AddBookComponent}
-    ]}
+      {path: 'store', component: AddBookComponent},
+      {path: 'feeds', component: AdminFeedsComponent}
+    ]},
+  { path: 'adminShare', loadChildren: () => import('./admin-share/admin-share.module').then(m => m.AdminShareModule) }
 
 ];
 

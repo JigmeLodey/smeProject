@@ -56,12 +56,12 @@ export class EditUserComponent implements OnInit {
   }
 
   onSave() {
-   /* this.service.onUpdate(this.data, this.editeUserForm.value).subscribe(res => {
+    this.service.onUpdate(this.data, this.editeUserForm.value).subscribe(res => {
       if (res) {
         this.state.updatteUser(this.editeUserForm.value);
         this.close();
       }
-    });*/
+    });
     this.state.updatteUser(this.editeUserForm.value);
   }
 

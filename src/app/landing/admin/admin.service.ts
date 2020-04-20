@@ -59,4 +59,7 @@ export class AdminService {
   onUpdate(id, value: any) {
     return this.http.put(`http://localhost:3000/auth/${id}`, value);
   }
+  getStore() {
+    return this.http.get(' http://localhost:3000/bookStore');
+  }
 }

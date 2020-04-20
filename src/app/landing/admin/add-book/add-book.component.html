@@ -1,1 +1,89 @@
-<p>add-book works!</p>
+<div class="container-fluid mt-3">
+  <div class="container header">
+   <div class="col-lg-12 row">
+     <div class="col-sm-3">
+       <div class="card">
+         <div class="card-header">
+           Add Book to Store
+         </div>
+         <div class="card-body center justify-content-md-center">
+          <button class="btn" (click)="onOpen()"> <mat-icon>add</mat-icon></button>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-3">
+       <div class="card">
+         <div class="card-header">
+           Book At Store
+         </div>
+         <div class="card-body">
+         <mat-icon style="font-size: 35px">show_chart</mat-icon> <span style="font-size: 30px" class="ml-5"> 5</span>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-3">
+       <div class="card">
+         <div class="card-header">
+           Book At Store
+         </div>
+         <div class="card-body">
+           <mat-icon style="font-size: 35px">show_chart</mat-icon> <span style="font-size: 30px" class="ml-5"> 5</span>
+         </div>
+       </div>
+     </div>
+     <div class="col-sm-3">
+       <div class="card">
+         <div class="card-header">
+           Book At Store
+         </div>
+         <div class="card-body">
+           <mat-icon style="font-size: 35px">show_chart</mat-icon> <span style="font-size: 30px" class="ml-5"> 5</span>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+  <div class="card mt-3">
+    <div class="card-header">
+      Book Table
+    </div>
+    <div class="card-body">
+      <div class="mat-elevation-z8">
+        <mat-table [dataSource]="listData" matSort>
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">{{i+1}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="author">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Author</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.author}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="genre">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Genre</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.genre}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="type">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Type</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.type}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">
+              <button mat-icon-button (click)="onEdit(element.id, i)"><mat-icon>launch</mat-icon></button>
+              <button mat-icon-button (click)="onDelete(element.id, i, 'user')" class="text-danger"><mat-icon>delete_outline</mat-icon></button>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayColumn;"></mat-row>
+        </mat-table>
+      </div>
+    </div>
+    <div class="card-footer">
+    <mat-paginator  [pageSizeOptions]="[5, 10, 15,20, 100] " [pageSize]="5"></mat-paginator>
+    </div>
+  </div>
+</div>
