@@ -1,0 +1,56 @@
+.main {
+  overflow: hidden;
+}
+
+ul{
+  list-style: none;
+}
+.right-feed {
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  .right-feed {
+    display: none;
+  }
+}
+
+.middle-feed {
+  height: 100%;
+}
+
+.post {
+  width: 100%;
+}
+
+.card-footer {
+  width: 100%;
+  display: flex;
+}
+
+.profile {
+  height: 30px;
+  width: 30px;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+.profile img:hover{
+  cursor: pointer;
+}
+.user_name {
+  margin-top: 7px;
+  padding: 5px;
+}
+.profile-admin{
+  width: 100%;
+}
+.profile-admin .info{
+  width: 100%;
+
+}
+.card-footer mat-icon{
+  cursor: pointer;
+}
