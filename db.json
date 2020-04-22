@@ -133,27 +133,27 @@
     {
       "name": "Science Fiction",
       "id": 1,
-      "value": 17
+      "value": 1
     },
     {
       "name": "Action",
       "id": 2,
-      "value": 22
+      "value": 1
     },
     {
       "name": "Romance",
       "id": 3,
-      "value": 16
+      "value": 1
     },
     {
-      "id": 4,
       "name": "Horror",
+      "id": 4,
       "value": 3
     },
     {
       "name": "Other",
       "id": 5,
-      "value": 51
+      "value": 1
     }
   ],
   "subscribe": [
@@ -241,11 +241,53 @@
   ],
   "bookStore": [
     {
+      "name": "checking",
+      "type": "Rolled",
+      "genre": "Horror",
+      "author": "checking",
+      "id": 4
+    },
+    {
+      "name": "work",
+      "type": "Donated",
+      "genre": "Horror",
+      "author": "work",
+      "id": 5
+    },
+    {
       "name": "testing",
       "type": "Donated",
-      "genre": "Science Fiction",
+      "genre": "Horror",
       "author": "lodey",
-      "id": 1
+      "id": 8
+    },
+    {
+      "name": "happy",
+      "type": "Donated",
+      "genre": "Romance",
+      "author": "haha",
+      "id": 10
+    },
+    {
+      "name": "three",
+      "type": "Rolled",
+      "genre": "Science Fiction",
+      "author": "hello",
+      "id": 11
+    },
+    {
+      "name": "testing",
+      "type": "Donated",
+      "genre": "Action",
+      "author": "hello",
+      "id": 12
+    },
+    {
+      "name": "ummm",
+      "type": "Donated",
+      "genre": "Other",
+      "author": "umm",
+      "id": 13
     }
   ]
 }
