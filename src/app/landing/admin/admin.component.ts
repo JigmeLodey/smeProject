@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {AdminService} from './admin.service';
 
 @Component({
   selector: 'app-admin',
@@ -9,10 +10,12 @@ import {Router} from '@angular/router';
 export class AdminComponent implements OnInit {
   showFiller = true;
   showLeft = false;
+  genders: any;
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private service: AdminService) { }
 
   ngOnInit(): void {
+   this.checker();
   }
 
   menu() {
@@ -38,5 +41,17 @@ export class AdminComponent implements OnInit {
     } else {
       this.route.navigate(['./admin/donation']);
     }
+  }
+
+  onLogout() {
+    localStorage.clear();
+    this.route.navigate(['./']);
+  }
+
+  private checker() {
+    const id = localStorage.getItem('auth');
+    this.service.getUserByID(id).subscribe(res => {
+      this.genders = res;
+    });
   }
 }

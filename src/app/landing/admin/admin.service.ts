@@ -14,8 +14,20 @@ export class AdminService {
     return this.http.get('http://localhost:3000/donation');
   }
 
+  addBook(value) {
+    return this.http.post('http://localhost:3000/bookStore', value);
+  }
+
   getBooks() {
     return this.http.get('http://localhost:3000/books');
+  }
+
+  onPostBook(value, id) {
+    return this.http.put(`http://localhost:3000/books/${id}`, value);
+  }
+
+  onDeleteBook(id) {
+    return this.http.delete(`http://localhost:3000/bookStore/${id}`);
   }
 
   getUser() {
@@ -49,9 +61,11 @@ export class AdminService {
   onDeleteSub(id: number) {
     return this.http.delete(`http://localhost:3000/subscribe/${id}`);
   }
+
   onDeleteRes(id: number) {
     return this.http.delete(`http://localhost:3000/request/${id}`);
   }
+
   getUserByID(id) {
     return this.http.get(`http://localhost:3000/auth/${id}`);
   }
@@ -59,7 +73,12 @@ export class AdminService {
   onUpdate(id, value: any) {
     return this.http.put(`http://localhost:3000/auth/${id}`, value);
   }
+
   getStore() {
     return this.http.get(' http://localhost:3000/bookStore');
+  }
+
+  addPost(value) {
+    return this.http.post('http://localhost:3000/post', value);
   }
 }

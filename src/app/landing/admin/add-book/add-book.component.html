@@ -74,7 +74,7 @@
             <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
             <mat-cell *matCellDef="let element; let i = index">
               <button mat-icon-button (click)="onEdit(element.id, i)"><mat-icon>launch</mat-icon></button>
-              <button mat-icon-button (click)="onDelete(element.id, i, 'user')" class="text-danger"><mat-icon>delete_outline</mat-icon></button>
+              <button mat-icon-button (click)="onDelete(element.id, i)" class="text-danger"><mat-icon>delete_outline</mat-icon></button>
             </mat-cell>
           </ng-container>
           <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>

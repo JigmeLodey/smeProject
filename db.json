@@ -48,6 +48,24 @@
       "password": "the_bridge",
       "status": "allow",
       "id": 13
+    },
+    {
+      "name": "Jigme Lodey",
+      "email": "jigme@gmail.com",
+      "password": "123456",
+      "gender": "Male",
+      "number": 77455740,
+      "role": "admin",
+      "id": 14
+    },
+    {
+      "name": "Tester",
+      "email": "test1234@gmail.com",
+      "password": "1234",
+      "gender": "Female",
+      "number": 1234567,
+      "role": "admin",
+      "id": 15
     }
   ],
   "request": [
@@ -113,19 +131,19 @@
   ],
   "books": [
     {
-      "id": 1,
       "name": "Science Fiction",
-      "value": 30
+      "id": 1,
+      "value": 17
     },
     {
-      "id": 2,
       "name": "Action",
-      "value": 20
+      "id": 2,
+      "value": 22
     },
     {
-      "id": 3,
       "name": "Romance",
-      "value": 15
+      "id": 3,
+      "value": 16
     },
     {
       "id": 4,
@@ -133,9 +151,9 @@
       "value": 3
     },
     {
+      "name": "Other",
       "id": 5,
-      "name": "others",
-      "value": 50
+      "value": 51
     }
   ],
   "subscribe": [
@@ -161,47 +179,73 @@
       "id": 1,
       "userId": "9",
       "feed": "hello",
-      "gender": "Male"
+      "gender": "Male",
+      "userName": "Test"
     },
     {
-      "id": 2,
-      "userId": "10",
+      "feed": "hey",
+      "userId": "15",
+      "userName": "why",
+      "gender": "Female",
+      "id": 2
+    },
+    {
+      "feed": "hello testing",
+      "userId": "15",
+      "userName": "null",
+      "gender": "Female",
+      "id": 3
+    },
+    {
+      "feed": "hello testing",
+      "userId": "15",
+      "userName": "hello",
+      "gender": "Female",
+      "id": 4
+    },
+    {
+      "feed": ";hsjksh",
+      "userId": "15",
+      "userName": null,
+      "gender": "Female",
+      "id": 5
+    },
+    {
+      "feed": "please work",
+      "userId": "15",
+      "userName": "Tester",
+      "gender": "Female",
+      "id": 6
+    },
+    {
+      "feed": "please work",
+      "userId": "15",
+      "userName": "Tester",
+      "gender": "Female",
+      "id": 7
+    },
+    {
       "feed": "hello",
-      "gender": "Female"
+      "userId": "15",
+      "userName": "Tester",
+      "gender": "Female",
+      "id": 8
     },
     {
-      "id": 3,
-      "userId": "10",
-      "feed": "hello",
-      "gender": "Male"
-    },
-    {
-      "id": 4,
-      "userId": "10",
-      "feed": "hello",
-      "gender": "Male"
-    },
-    {
-      "id": 5,
-      "userId": "10",
-      "feed": "heillo",
-      "gender": "Male"
+      "feed": "testing",
+      "userId": "15",
+      "userName": "Tester",
+      "gender": "Female",
+      "id": 9
     }
   ],
   "bookStore": [
     {
-      "id": 1,
-      "name": "Testing",
-      "author": "Tester",
-      "genre": "Test",
-      "type": "Donated"
-    },
-    {
-      "id": 2,
-      "name": "Who",
-      "author": "Tester",
-      "genre": "Test",
-      "type": "Rolled"
+      "name": "testing",
+      "type": "Donated",
+      "genre": "Science Fiction",
+      "author": "lodey",
+      "id": 1
     }
   ]
 }

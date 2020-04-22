@@ -88,6 +88,7 @@ export class AuthComponent implements OnInit {
         }
         if (this.loginChecker) {
           if (res[this.indexing].role === 'admin') {
+            localStorage.setItem('auth', res[this.indexing].id);
             this.route.navigate(['/admin']);
           } else {
             this.route.navigate(['/user']);

@@ -5,7 +5,8 @@
         <div class="row">
           <div class="col-xs-6 ">
             <div class="profile-admin">
-              <img src="../../../../assets/image/others/male.png" class="embed-responsive">
+              <img src="../../../../assets/image/others/male.png" class="embed-responsive" *ngIf="adminDetails?.gender === 'Male'">
+              <img src="../../../../assets/image/others/female.png" class="embed-responsive" *ngIf="adminDetails?.gender === 'Female'">
             </div>
           </div>
           <div class="info col-md-12 mt-3">
@@ -19,13 +20,13 @@
                 <li>Role: </li>
               </ul>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-7">
               <ul>
-                <li>Name: </li>
-                <li>Email: </li>
-                <li>Gender: </li>
-                <li>Phone: </li>
-                <li>Role: </li>
+                <li>{{this.adminDetails?.name}} </li>
+                <li>{{this.adminDetails?.email}} </li>
+                <li>{{this.adminDetails?.gender}} </li>
+                <li>{{this.adminDetails?.number}} </li>
+                <li>{{this.adminDetails?.role}} </li>
               </ul>
             </div>
           </div>
@@ -40,11 +41,11 @@
             <div class="card-header" style="padding: 2px; font-size: 13px">
               Create Post
             </div>
-            <div class="card-body" style="padding:0">
-              <textarea class="form-control" rows="3" cols="59" style="resize: none; border: none"></textarea>
+            <div [formGroup]="postForm" class="card-body" style="padding:0">
+              <textarea class="form-control" rows="3" cols="59" style="resize: none; border: none" formControlName="feed"></textarea>
             </div>
             <div class="card-footer" style="padding: 3px">
-              <button class="btn btn-primary " style="height: 30px; font-size: 12px">
+              <button class="btn btn-primary " style="height: 30px; font-size: 12px" (click)="onPost()">
                 Post
               </button>
             </div>
@@ -59,7 +60,7 @@
                   </div>
                   <div class="col-xs-2 align-text-bottom">
                     <div class="user_name">
-                      hi
+                      {{post.userName}}
                     </div>
                   </div>
                 </div>

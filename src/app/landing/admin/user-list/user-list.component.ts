@@ -36,8 +36,7 @@ export class UserListComponent implements OnInit {
 
   constructor(private service: AdminService,
               public dialog: MatDialog,
-              private state: UserListStateService,
-              private editState: EditUserStateService) {
+              private state: UserListStateService) {
   }
 
   ngOnInit(): void {

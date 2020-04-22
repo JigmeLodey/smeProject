@@ -81,9 +81,10 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
       <div class="avatar">
-        <img src="../../../assets/image/others/male.png" class="embed-responsive" [matMenuTriggerFor]="menus">
+        <img src="../../../../assets/image/others/male.png" class="embed-responsive" *ngIf="genders?.gender === 'Male'" [matMenuTriggerFor]="menus">
+        <img src="../../../../assets/image/others/female.png" class="embed-responsive" *ngIf="genders?.gender === 'Female'" [matMenuTriggerFor]="menus">
         <mat-menu #menus="matMenu">
-          <span mat-menu-item><mat-icon>logout</mat-icon> Log Out</span>
+          <span mat-menu-item (click)="onLogout()"><mat-icon>logout</mat-icon> Log Out</span>
           <span mat-menu-item><mat-icon>delete</mat-icon> Delete Account</span>
         </mat-menu>
 
