@@ -69,13 +69,11 @@ export class UserListComponent implements OnInit {
 
   create() {
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     this.dialog.open(AddUserComponent, dialogConfig);
   }
 
   onEdit(id: any, eId) {
-    /*this.editState.updatetotalUser(id);*/
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data = id;
     this.dialog.open(EditUserComponent, dialogConfig);

@@ -81,4 +81,25 @@ export class AdminService {
   addPost(value) {
     return this.http.post('http://localhost:3000/post', value);
   }
+  getUserDonatedBooks() {
+    return this.http.get('http://localhost:3000/usersBookDonate');
+  }
+  onDeleteUserDonateBook(id) {
+    return this.http.delete(`http://localhost:3000/usersBookDonate/${id}`);
+  }
+  getUserBookRoll() {
+    return this.http.get('http://localhost:3000/usersBookRoll');
+  }
+  onDeleteUserBookRoll(id) {
+    return this.http.delete(`http://localhost:3000/usersBookRoll/${id}`);
+  }
+  getUserDonatio() {
+    return this.http.get('http://localhost:3000/usersDonations');
+  }
+  onDeleteUserDonation(id) {
+    return this.http.delete(`http://localhost:3000/usersDonations/${id}`);
+  }
+  getUserFeedback() {
+    return this.http.get('http://localhost:3000/feedback');
+  }
 }

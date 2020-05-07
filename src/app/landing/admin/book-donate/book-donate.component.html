@@ -1,1 +1,79 @@
-<p>book-donate works!</p>
+
+<div class="container-fluid mt-3">
+  <div class="card mt-3">
+    <div class="card-header">
+     Donated Book's Table
+    </div>
+    <div class="card-body">
+      <div class="mat-elevation-z8">
+        <mat-table [dataSource]="listData" matSort>
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">{{i+1}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="author">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Author</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.author}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="genre">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Genre</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.type}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">
+              <button mat-icon-button (click)="onDelete(element.id, i, element.type, element.genre)" class="text-danger"><mat-icon>delete_outline</mat-icon></button>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayColumn;"></mat-row>
+        </mat-table>
+      </div>
+    </div>
+    <div class="card-footer">
+      <mat-paginator  [pageSizeOptions]="[10, 20, 30,40, 100] " [pageSize]="10"></mat-paginator>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="card-header">
+      Book's Donation Request Table
+    </div>
+    <div class="card-body">
+      <div class="mat-elevation-z8">
+        <mat-table [dataSource]="listData" matSort>
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">{{i+1}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="author">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Author</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.author}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="genre">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Genre</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.type}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">
+              <button mat-icon-button (click)="onDelete(element.id, i, element.type, element.genre)" class="text-danger"><mat-icon>delete_outline</mat-icon></button>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayColumn;"></mat-row>
+        </mat-table>
+      </div>
+    </div>
+    <div class="card-footer">
+      <mat-paginator  [pageSizeOptions]="[10, 20, 30,40, 100] " [pageSize]="10"></mat-paginator>
+    </div>
+  </div>
+</div>

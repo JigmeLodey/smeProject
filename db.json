@@ -56,6 +56,7 @@
       "gender": "Male",
       "number": 77455740,
       "role": "admin",
+      "status": "allow",
       "id": 14
     },
     {
@@ -154,6 +155,29 @@
       "name": "Other",
       "id": 5,
       "value": 1
+    }
+  ],
+  "usersBookDonate": [
+    {
+      "id": 1,
+      "name": "babys day out",
+      "author": "unknown",
+      "type": "other"
+    }
+  ],
+  "usersBookRoll": [
+    {
+      "name": "baby day out",
+      "author": "unknown",
+      "type": "other"
+    }
+  ],
+  "usersDonations": [
+    {
+      "id": 1,
+      "name": "baby day out",
+      "author": "unknown",
+      "type": "other"
     }
   ],
   "subscribe": [
@@ -288,6 +312,12 @@
       "genre": "Other",
       "author": "umm",
       "id": 13
+    }
+  ],
+  "feedback": [
+    {
+      "id": 1,
+      "message": "hello"
     }
   ]
 }
