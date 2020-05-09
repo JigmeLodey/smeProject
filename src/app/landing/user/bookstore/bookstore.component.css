@@ -1,0 +1,47 @@
+.bookstore{
+  padding: 20px;
+}
+
+.title{
+  padding: 20px;
+  background: #0c5460;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  font-size: 30px;
+  border-radius: 20px;
+  color: #ffffff;
+  background-position: center;
+}
+.input-field{
+  width: 80%;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: 200;
+  padding-left: 5px;
+  border-bottom: 1px solid white;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+.about-title{
+  font-size: 20px;
+  font-style: italic;
+}
+.about{
+  font-size: 15px;
+  font-weight: 200;
+  color: black;
+  padding-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.book-title{
+  font-size: 20px ;
+}
+

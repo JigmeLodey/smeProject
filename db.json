@@ -134,12 +134,12 @@
     {
       "name": "Science Fiction",
       "id": 1,
-      "value": 1
+      "value": 0
     },
     {
       "name": "Action",
       "id": 2,
-      "value": 1
+      "value": 0
     },
     {
       "name": "Romance",
@@ -149,7 +149,7 @@
     {
       "name": "Horror",
       "id": 4,
-      "value": 3
+      "value": 1
     },
     {
       "name": "Other",
@@ -265,53 +265,28 @@
   ],
   "bookStore": [
     {
-      "name": "checking",
+      "name": "The Beast from the East",
       "type": "Rolled",
       "genre": "Horror",
-      "author": "checking",
-      "id": 4
+      "author": " R.L. Stine",
+      "summary": "They're baa-ack! Make way for the bestselling children's series of all time! With a fresh new look, GOOSEBUMPS is set to scare a whole new generation of kids. So reader beware--you're in for a scare!\n\nGinger Wald and her identical twin brothers, Nat and Pat, are lost in the woods. No problem. After all, Ginger did go to that stupid nature camp.\n\nStill, there's something odd about this part of the woods. The grass is yellow. The bushes are purple. And the trees are like skyscrapers.\n\nThen Ginger and her brothers meet the beasts. They're big blue furry creatures. And they want to play a game. The winners get to live. The losers get eaten. . . .",
+      "id": 1
     },
     {
-      "name": "work",
-      "type": "Donated",
-      "genre": "Horror",
-      "author": "work",
-      "id": 5
-    },
-    {
-      "name": "testing",
-      "type": "Donated",
-      "genre": "Horror",
-      "author": "lodey",
-      "id": 8
-    },
-    {
-      "name": "happy",
-      "type": "Donated",
+      "name": "The Longest Ride",
+      "type": "Rolled",
       "genre": "Romance",
-      "author": "haha",
-      "id": 10
+      "author": "Sparks, Nicholas",
+      "summary": "The novel “The Longest Ride” by Nicholas Sparks unravels two beautiful romance stories. The two stories are more different than alike but each love story have its own unique characteristics. The first story is about a man named Ira. ",
+      "id": 2
     },
     {
-      "name": "three",
-      "type": "Rolled",
-      "genre": "Science Fiction",
-      "author": "hello",
-      "id": 11
-    },
-    {
-      "name": "testing",
-      "type": "Donated",
-      "genre": "Action",
-      "author": "hello",
-      "id": 12
-    },
-    {
-      "name": "ummm",
+      "name": "Lord of the Rings",
       "type": "Donated",
       "genre": "Other",
-      "author": "umm",
-      "id": 13
+      "author": "J. R. R. Tolkien",
+      "summary": "\n\nSauron, the Dark Lord, has gathered to him all the Rings of Power, the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring, the ring that rules them all, which has fallen into the hands of the hobbit, Bilbo Baggins. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.\n\nSince it was first published in 1954, The Lord of the Rings has been a book people have treasured. Steeped in unrivalled magic and otherworldliness, its sweeping fantasy has touched the hearts of young and old alike. Written by Professor J.R.R. Tolkien and consisting of three separate books (The Fellowship of the Ring, The Two Towers and The Return of the King) The Lord of the Rings was first published by George, Allen and Unwin between 1954 and 1955.\n\nAnd a magnificent achievement it is; an epic tale of friendship, love and heroism, a book that set the benchmark for all fantasy novels to come. Tolkien's descriptive narrative beautifully depicts Middle-earth and the journey that the Fellowship undertakes will remain with them for the rest of their lives.\n\nIt is hard to put into words the happiness that can be felt when reading a fantasy book as good as this and anybody who has never read it should set aside some time to do so. Is it the best fantasy book of all time? In my opinion, yes.\n\nThere's no salvation for a fantasy fan who hasn't read the gospel of the genre. The influence of The Lord of the Rings is so universal that everybody from George Lucas to Led Zeppelin has appropriated it for one purpose or another. Not just revolutionary because it was groundbreaking, The Lord of the Rings is timeless because it's the product of a truly top-shelf mind. Tolkien was a distinguished linguist and Oxford scholar of dead languages with strong ideas about the importance of myth and story and a deep appreciation of nature. His epic, 10 years in the making, recounts the Great War of the Ring and the closing of Middle-Earth's Third Age, a time when magic begins to fade from the world and men rise to dominance. Tolkien carefully details this transition with tremendous skill and love, creating in The Lord of the Rings a universal and all-embracing tale, a justly celebrated classic.",
+      "id": 3
     }
   ],
   "feedback": [

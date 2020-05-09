@@ -8,10 +8,10 @@ import {FeaturesComponent} from './features/features.component';
 import {BookstoreComponent} from './bookstore/bookstore.component';
 
 const routes: Routes = [
-  { path: '', component: FeedsComponent },
+  { path: 'feed', component: FeedsComponent },
   {path: 'profile', component: ProfileComponent},
   {path: 'feature', component: FeaturesComponent},
-  {path: 'store', component: BookstoreComponent}
+  {path: '', component: BookstoreComponent}
 ];
 
 @NgModule({

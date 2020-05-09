@@ -78,7 +78,8 @@ export class AddDialogComponent implements OnInit {
       name: [undefined, Validators.required],
       type: [undefined, Validators.required],
       genre: [undefined, Validators.required],
-      author: [undefined, Validators.required]
+      author: [undefined, Validators.required],
+      summary: [undefined, Validators.required]
     });
   }
 
