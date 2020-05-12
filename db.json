@@ -7,7 +7,11 @@
       "role": "member",
       "gender": "Male",
       "status": "allow",
-      "id": 9
+      "id": 9,
+      "city": "city",
+      "street": "street",
+      "state": "state",
+      "about": "about..."
     },
     {
       "name": "Jigme",
@@ -17,7 +21,11 @@
       "role": "member",
       "email": "kool@gmail.com",
       "password": "the_bridge123",
-      "id": 10
+      "id": 10,
+      "city": "city",
+      "street": "street",
+      "state": "state",
+      "about": "about..."
     },
     {
       "name": "Testing",
@@ -27,27 +35,39 @@
       "status": "allow",
       "email": "testing@gmail.com",
       "password": "the_bridge123",
-      "id": 11
+      "id": 11,
+      "city": "city",
+      "about": "about...",
+      "street": "street",
+      "state": "state"
     },
     {
-      "name": "DrukBit",
-      "gender": "Male",
+      "name": "DrukBits",
+      "gender": "Female",
       "number": 17171717,
-      "role": "member",
       "email": "drukbit@gmail.com",
-      "password": "the_bridge",
+      "role": "member",
       "status": "allow",
+      "password": "the_bridge",
+      "city": "city",
+      "street": "thimphu",
+      "state": "state",
+      "about": "My name is jigme love reading",
       "id": 12
     },
     {
-      "name": "Bhutan",
+      "name": "Bhutans",
       "gender": "Male",
-      "number": 171717171,
-      "role": "admin",
+      "number": 17171717,
       "email": "bhutan@gmail.com",
-      "password": "the_bridge",
+      "role": "member",
       "status": "allow",
-      "id": 13
+      "password": "the_bridge",
+      "id": 13,
+      "city": "city",
+      "street": "street",
+      "state": "state",
+      "about": "about..."
     },
     {
       "name": "Jigme Lodey",
@@ -57,7 +77,11 @@
       "number": 77455740,
       "role": "admin",
       "status": "allow",
-      "id": 14
+      "id": 14,
+      "city": "city",
+      "street": "street",
+      "state": "state",
+      "about": "about..."
     },
     {
       "name": "Tester",
@@ -66,7 +90,11 @@
       "gender": "Female",
       "number": 1234567,
       "role": "admin",
-      "id": 15
+      "id": 15,
+      "city": "city",
+      "street": "street",
+      "state": "state",
+      "about": "about..."
     }
   ],
   "request": [

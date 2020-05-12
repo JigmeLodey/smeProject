@@ -1,1 +1,129 @@
-<p>profile works!</p>
+<app-header></app-header>
+<body>
+<div class="card-container">
+  <div class="card" style="background: transparent">
+    <div class="card-title">
+      personal
+    </div>
+
+
+    <div class="card-body" *ngIf="!edit">
+      <div *ngIf="!picChecker">
+        <img src="../../../../assets/image/others/male.png" alt="user" *ngIf="user?.gender == 'Male'">
+        <img src="../../../../assets/image/others/female.png" alt="user" *ngIf="user?.gender == 'Female'">
+      </div>
+      <div *ngIf="picChecker">
+      </div>
+      <span class="pro" (click)="onEdit()">Edit</span>
+      <h3>{{user?.name}}</h3>
+      <h6>{{user?.gender}}</h6>
+      <p>{{user?.email}}</p>
+      <p>{{user?.number}}</p>
+    </div>
+
+
+
+    <div class="card-body" *ngIf="edit" >
+      <div *ngIf="!picChecker">
+        <img src="../../../../assets/image/others/male.png" alt="user" *ngIf="user?.gender == 'Male'">
+        <img src="../../../../assets/image/others/female.png" alt="user" *ngIf="user?.gender == 'Female'">
+      </div>
+      <div *ngIf="picChecker">
+
+      </div>
+      <span class="pro" (click)="onSave()">Save</span>
+      <span class="pros" (click)="onCancel()" >Cancel</span>
+      <form [formGroup]="personalForm">
+        <p>
+          <input matInput type="text" formControlName="name" >
+        </p>
+        <p>
+          <select matInput style="width: 55%" formControlName="gender" >
+            <option value="Female">
+              Female
+            </option>
+            <option value="Male">
+              Male
+            </option>
+          </select>
+        </p>
+        <p>
+          <input type="text" formControlName="number" >
+        </p>
+      </form>
+    </div>
+  </div>
+  <div class="card" style="background: transparent">
+    <div class="card-title">
+     Other Information
+    </div>
+    <div class="card-body" *ngIf="!edit">
+      <div class="skills">
+       <div class="col-lg-12">
+         <h6>Address</h6>
+       </div>
+        <div class="col text-center">
+          <div class="col-sm-12">
+           {{user?.city}}
+          </div>
+          <div class="col-sm-12">
+          {{user?.street}}
+          </div>
+          <div class="col-sm-12">
+            {{user?.state}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body" *ngIf="edit" [formGroup]="personalForm">
+      <div class="skills">
+        <div class="col-lg-12">
+          <h6>Address</h6>
+        </div>
+        <div class="col col-lg-12 text-center">
+          <div class="col-sm-3">
+            <input formControlName="city">
+          </div>
+          <div class="col-sm-3">
+            <input formControlName="street">
+          </div>
+          <div class="col-sm-3">
+            <input formControlName="state">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="background: transparent">
+    <div class="card-title">
+    About
+    </div>
+    <div class="card-body" *ngIf="!edit">
+      <div class="skills">
+        <div class="col-lg-12">
+          <h6>About Me</h6>
+        </div>
+        <div class="col text-center">
+          <div class="col-sm-12">
+            {{user?.about}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body" *ngIf="edit" [formGroup]="personalForm">
+      <div class="skills">
+        <div class="col-lg-12">
+          <h6>About Me</h6>
+        </div>
+        <div class="col col-lg-12 text-center">
+          <div class="col-sm-12">
+            <textarea style="width: 100%" formControlName="about">
+
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

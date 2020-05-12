@@ -55,6 +55,9 @@ export class AuthComponent implements OnInit {
       password: [undefined, [Validators.required]],
       gender: [undefined, Validators.required],
       number: [undefined, Validators.required],
+      city: ['city'],
+      street: ['street'],
+      state: ['state'],
       role: ['member'],
     });
   }
@@ -91,6 +94,7 @@ export class AuthComponent implements OnInit {
             localStorage.setItem('auth', res[this.indexing].id);
             this.route.navigate(['/admin']);
           } else {
+            localStorage.setItem('auth', res[this.indexing].id);
             this.route.navigate(['/user']);
           }
         } else {
