@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from '../user.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -15,7 +16,7 @@ export class ProfileComponent implements OnInit {
   edit = false;
   personalForm: FormGroup;
 
-  constructor(private service: UserService, private formBuilder: FormBuilder) {
+  constructor(private service: UserService, private formBuilder: FormBuilder, private route: Router) {
   }
 
   ngOnInit(): void {
@@ -70,4 +71,6 @@ export class ProfileComponent implements OnInit {
   onCancel() {
     this.edit = false;
   }
+
+
 }

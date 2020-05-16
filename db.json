@@ -43,7 +43,7 @@
     },
     {
       "name": "DrukBits",
-      "gender": "Female",
+      "gender": "Male",
       "number": 17171717,
       "email": "drukbit@gmail.com",
       "role": "member",
@@ -51,7 +51,7 @@
       "password": "the_bridge",
       "city": "city",
       "street": "thimphu",
-      "state": "state",
+      "state": "Thimphu",
       "about": "My name is jigme love reading",
       "id": 12
     },
@@ -95,6 +95,31 @@
       "street": "street",
       "state": "state",
       "about": "about..."
+    },
+    {
+      "name": "Jigme",
+      "gender": "Male",
+      "number": 123456,
+      "email": "lodey@lodey.com",
+      "role": "member",
+      "password": "lodey",
+      "city": "bonday",
+      "street": "paro",
+      "state": "paro",
+      "about": "i am good reader",
+      "id": 16
+    },
+    {
+      "name": "Hehe",
+      "email": "llodey@lodey.com",
+      "password": "lodey",
+      "gender": "Male",
+      "number": 12345678,
+      "city": null,
+      "street": null,
+      "state": null,
+      "role": null,
+      "id": 17
     }
   ],
   "request": [
@@ -195,9 +220,11 @@
   ],
   "usersBookRoll": [
     {
+      "id": 1,
       "name": "baby day out",
       "author": "unknown",
-      "type": "other"
+      "type": "other",
+      "rID": 1
     }
   ],
   "usersDonations": [
@@ -321,6 +348,17 @@
     {
       "id": 1,
       "message": "hello"
+    }
+  ],
+  "broll": [
+    {
+      "id": 1,
+      "bookname": "hello",
+      "booktype": "hello",
+      "author": "hey",
+      "username": "lodey",
+      "email": "lodey@gmail.com",
+      "phone": 12121212
     }
   ]
 }

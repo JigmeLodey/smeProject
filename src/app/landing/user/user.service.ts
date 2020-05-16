@@ -89,23 +89,20 @@ export class UserService {
     return this.http.delete(`http://localhost:3000/usersBookDonate/${id}`);
   }
 
-  getUserBookRoll() {
-    return this.http.get('http://localhost:3000/usersBookRoll');
+  postUserBookRoll(value: any) {
+    return this.http.post('http://localhost:3000/usersBookRoll', value);
   }
 
-  onDeleteUserBookRoll(id) {
-    return this.http.delete(`http://localhost:3000/usersBookRoll/${id}`);
-  }
 
-  getUserDonatio() {
-    return this.http.get('http://localhost:3000/usersDonations');
+  onSendRoll(value: any) {
+    return this.http.post('http://localhost:3000/broll', value);
   }
 
   onDeleteUserDonation(id) {
     return this.http.delete(`http://localhost:3000/usersDonations/${id}`);
   }
 
-  getUserFeedback() {
-    return this.http.get('http://localhost:3000/feedback');
+  postUserFeedback(value) {
+    return this.http.post('http://localhost:3000/feedback', value);
   }
 }

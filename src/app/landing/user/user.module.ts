@@ -16,20 +16,27 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {NgbButtonsModule} from '@ng-bootstrap/ng-bootstrap';
 import {ReactiveFormsModule} from '@angular/forms';
+import { DonationComponent } from './donation/donation.component';
+import { BookdonationComponent } from './bookdonation/bookdonation.component';
+import { BookRollComponent } from './book-roll/book-roll.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {NotifierModule} from 'angular-notifier';
 
 
 @NgModule({
-  declarations: [UserComponent, FeedsComponent, ProfileComponent, BookstoreComponent, FeaturesComponent, ShareComponent, HeaderComponent],
-  imports: [
-    CommonModule,
-    UserRoutingModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCardModule,
-    MatSelectModule,
-    NgbButtonsModule,
-    ReactiveFormsModule
-  ]
+  declarations: [UserComponent, FeedsComponent, ProfileComponent, BookstoreComponent, FeaturesComponent, ShareComponent, HeaderComponent, DonationComponent, BookdonationComponent, BookRollComponent],
+    imports: [
+        CommonModule,
+        UserRoutingModule,
+        MatToolbarModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCardModule,
+        MatSelectModule,
+        NgbButtonsModule,
+        ReactiveFormsModule,
+        MatStepperModule,
+        NotifierModule
+    ]
 })
 export class UserModule { }

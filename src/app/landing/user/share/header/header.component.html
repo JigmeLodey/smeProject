@@ -1,23 +1,26 @@
-<mat-toolbar>
-  <div class="container-fluid">
-    <div class="row">
-     <div class="col-sm-3">
-       <div class="logo">
 
-       </div>
-     </div>
-      <div class="col-sm-6">
-        <div class="search">
-          hey
-        </div>
+<div class="bs-example">
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a href="#" class="navbar-brand">
+      <img src="/examples/images/logo.svg" height="28" alt="CoolBrand">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+        <span class="nav-item nav-link" (click)="nav('home')">Home</span>
+        <span class="nav-item nav-link" (click)="nav('profile')">Profile</span>
+        <span class="nav-item nav-link" (click)="nav('feed')">Feeds</span>
+        <span class="nav-item nav-link" (click)="nav('bd')"> Book Donation</span>
+        <span class="nav-item nav-link" (click)="nav('d')"> Donation</span>
+        <span class="nav-item nav-link" (click)="nav('rb')"> Book Roll</span>
       </div>
-      <div class="col-sm-3">
-       <div class="align-content-md-end">
-        <div class="icons">
-          hello
-        </div>
-       </div>
+      <div class="navbar-nav ml-auto">
+        <a href="#" class="nav-item nav-link">Login</a>
       </div>
     </div>
-  </div>
-</mat-toolbar>
+  </nav>
+</div>
+
