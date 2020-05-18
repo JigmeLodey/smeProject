@@ -27,7 +27,7 @@ export class BookRollComponent implements OnInit {
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private service: UserService, private notifierService: NotifierService,) {
+  constructor(private formBuilder: FormBuilder, private service: UserService, private notifierService: NotifierService) {
     this.notifier = notifierService;
   }
 
@@ -100,7 +100,7 @@ export class BookRollComponent implements OnInit {
         } else {
           this.notifier.notify('error', 'Failed' );
         }
-      })
+      });
     }
   }
 }

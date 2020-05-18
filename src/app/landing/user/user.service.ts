@@ -18,8 +18,8 @@ export class UserService {
     return this.http.post('http://localhost:3000/bookStore', value);
   }
 
-  getBooks() {
-    return this.http.get('http://localhost:3000/books');
+  postBook(value) {
+    return this.http.post('http://localhost:3000/usersDonations', value);
   }
 
   onPostBook(value, id) {
@@ -37,8 +37,8 @@ export class UserService {
     return this.http.put(`http://localhost:3000/auth/${id}`, value);
   }
 
-  getSubscribe() {
-    return this.http.get(' http://localhost:3000/subscribe');
+  onRequestDonation(value) {
+    return this.http.post(' http://localhost:3000/bdonate', value);
   }
 
   getContact() {
