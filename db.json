@@ -158,29 +158,24 @@
   ],
   "donation": [
     {
+      "name": "Footwares",
       "id": 1,
-      "name": "book",
-      "value": 30
+      "value": 5
     },
     {
       "id": 2,
-      "name": "clouts",
-      "value": 20
-    },
-    {
-      "id": 3,
-      "name": "Foot wares",
+      "name": "Clouts",
       "value": 15
     },
     {
-      "id": 4,
-      "name": "electronic",
+      "id": 3,
+      "name": "Electronic",
       "value": 3
     },
     {
-      "id": 5,
-      "name": "others",
-      "value": 50
+      "name": "Other",
+      "id": 4,
+      "value": 51
     }
   ],
   "books": [
@@ -229,10 +224,31 @@
   ],
   "usersDonations": [
     {
-      "id": 1,
-      "name": "baby day out",
-      "author": "unknown",
-      "type": "other"
+      "name": "lkjdksjd",
+      "email": "sdjksd",
+      "phone": "sdksdj",
+      "type": "Other",
+      "addInfo": "sdjksdj",
+      "id": 32
+    },
+    {
+      "name": "test",
+      "email": "tes@gmail.com",
+      "phone": "121212",
+      "type": "Foot-ware",
+      "addInfo": "hello",
+      "id": 33
+    }
+  ],
+  "usersDonationsRequest": [
+    {
+      "name": "lkjdksjd",
+      "email": "sdjksd",
+      "phone": "sdksdj",
+      "type": "Other",
+      "place": "yala",
+      "addInfo": "sdjksdj",
+      "id": 32
     }
   ],
   "subscribe": [
@@ -320,12 +336,9 @@
   ],
   "bookStore": [
     {
-      "name": "The Beast from the East",
-      "type": "Rolled",
-      "genre": "Horror",
-      "author": " R.L. Stine",
-      "summary": "They're baa-ack! Make way for the bestselling children's series of all time! With a fresh new look, GOOSEBUMPS is set to scare a whole new generation of kids. So reader beware--you're in for a scare!\n\nGinger Wald and her identical twin brothers, Nat and Pat, are lost in the woods. No problem. After all, Ginger did go to that stupid nature camp.\n\nStill, there's something odd about this part of the woods. The grass is yellow. The bushes are purple. And the trees are like skyscrapers.\n\nThen Ginger and her brothers meet the beasts. They're big blue furry creatures. And they want to play a game. The winners get to live. The losers get eaten. . . .",
-      "id": 1
+      "name": "Footwares",
+      "id": 1,
+      "value": null
     },
     {
       "name": "The Longest Ride",

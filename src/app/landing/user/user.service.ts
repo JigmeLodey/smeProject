@@ -10,7 +10,7 @@ export class UserService {
   constructor(private http: HttpClient) {
   }
 
-  onRequest() {
+  getDonationRequest() {
     return this.http.get('http://localhost:3000/donation');
   }
 
@@ -22,12 +22,8 @@ export class UserService {
     return this.http.post('http://localhost:3000/usersDonations', value);
   }
 
-  onPostBook(value, id) {
-    return this.http.put(`http://localhost:3000/books/${id}`, value);
-  }
-
-  onDeleteBook(id) {
-    return this.http.delete(`http://localhost:3000/bookStore/${id}`);
+  onUpdateChart(value, id) {
+    return this.http.put(`http://localhost:3000/donation/${id}`, value);
   }
 
   getUser(id) {
@@ -41,12 +37,12 @@ export class UserService {
     return this.http.post(' http://localhost:3000/bdonate', value);
   }
 
-  getContact() {
-    return this.http.get('  http://localhost:3000/contact');
+  postDonationValue(value) {
+    return this.http.post('  http://localhost:3000/usersDonations', value);
   }
 
-  addUser(value: any) {
-    return this.http.post(' http://localhost:3000/auth', value);
+  donationAsked(value: any) {
+    return this.http.post(' http://localhost:3000/usersDonationsRequest', value);
   }
 
   getPost() {

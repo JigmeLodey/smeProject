@@ -15,13 +15,21 @@
             <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
             <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
           </ng-container>
-          <ng-container matColumnDef="author">
-            <mat-header-cell *matHeaderCellDef mat-sort-header>Author</mat-header-cell>
-            <mat-cell *matCellDef="let element">{{element.author}}</mat-cell>
+          <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
           </ng-container>
-          <ng-container matColumnDef="genre">
-            <mat-header-cell *matHeaderCellDef mat-sort-header>Genre</mat-header-cell>
+          <ng-container matColumnDef="phone">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Phone</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.phone}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="type">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Type</mat-header-cell>
             <mat-cell *matCellDef="let element">{{element.type}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="info">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Message</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.addInfo}}</mat-cell>
           </ng-container>
           <ng-container matColumnDef="action">
             <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
@@ -35,7 +43,7 @@
       </div>
     </div>
     <div class="card-footer">
-      <mat-paginator  [pageSizeOptions]="[10, 20, 30,40, 100] " [pageSize]="10"></mat-paginator>
+      <mat-paginator #paginator [pageSizeOptions]="[5, 10, 15,20, 100]" [pageSize]="5" ></mat-paginator>
     </div>
   </div>
   <div class="card mt-3">
@@ -44,7 +52,7 @@
     </div>
     <div class="card-body">
       <div class="mat-elevation-z8">
-        <mat-table [dataSource]="listData" matSort>
+        <mat-table [dataSource]="listData2" matSort>
           <ng-container matColumnDef="id">
             <mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell>
             <mat-cell *matCellDef="let element; let i = index">{{i+1}}</mat-cell>
@@ -53,27 +61,39 @@
             <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
             <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
           </ng-container>
-          <ng-container matColumnDef="author">
-            <mat-header-cell *matHeaderCellDef mat-sort-header>Author</mat-header-cell>
-            <mat-cell *matCellDef="let element">{{element.author}}</mat-cell>
+          <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
           </ng-container>
-          <ng-container matColumnDef="genre">
-            <mat-header-cell *matHeaderCellDef mat-sort-header>Genre</mat-header-cell>
+          <ng-container matColumnDef="phone">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Phone</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.phone}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="type">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Type</mat-header-cell>
             <mat-cell *matCellDef="let element">{{element.type}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="place">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Place</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.place}}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="info">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Message</mat-header-cell>
+            <mat-cell *matCellDef="let element">{{element.addInfo}}</mat-cell>
           </ng-container>
           <ng-container matColumnDef="action">
             <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
             <mat-cell *matCellDef="let element; let i = index">
-              <button mat-icon-button (click)="onDelete(element.id, i, element.type, element.genre)" class="text-danger"><mat-icon>delete_outline</mat-icon></button>
+              <button mat-icon-button (click)="onDelete2(element.id, i, element.type, element.genre)" class="text-danger"><mat-icon>delete_outline</mat-icon></button>
             </mat-cell>
           </ng-container>
-          <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
-          <mat-row *matRowDef="let row; columns: displayColumn;"></mat-row>
+          <mat-header-row *matHeaderRowDef="displayColumn2"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayColumn2;"></mat-row>
         </mat-table>
       </div>
     </div>
     <div class="card-footer">
-      <mat-paginator  [pageSizeOptions]="[10, 20, 30,40, 100] " [pageSize]="10"></mat-paginator>
+      <mat-paginator #paginator2 [pageSizeOptions]="[5, 10, 15,20, 100]" [pageSize]="5" ></mat-paginator>
     </div>
   </div>
 </div>

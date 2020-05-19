@@ -108,4 +108,10 @@ export class AdminService {
   getRequestDelete(id) {
     return this.http.delete(`http://localhost:3000/broll/${id}`);
   }
+  getUserDonationRequest() {
+    return this.http.get('http://localhost:3000/usersDonationsRequest');
+  }
+  onDeleteDonationRequest(id) {
+    return this.http.delete(`http://localhost:3000/usersDonationsRequest/${id}`);
+  }
 }
