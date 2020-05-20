@@ -127,7 +127,7 @@ export class DonationComponent implements OnInit {
 
   private thirdStep() {
     this.thirdFormGroup = this.formBuilder.group({
-      feedback: [undefined]
+      message: [undefined]
     });
   }
 }

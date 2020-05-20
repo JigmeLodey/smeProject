@@ -61,11 +61,13 @@ export class DashboardComponent implements OnInit {
       this.subscribeLength = Object.keys(res).length;
     });
   }
-  getPost(): void{
-  this.service.getPost().subscribe(res => {
-    this.postLength = Object.keys(res).length;
-  });
+
+  getPost(): void {
+    this.service.getUserFeedback().subscribe(res => {
+      this.postLength = Object.keys(res).length;
+    });
   }
+
   getContact(): void {
     this.service.getContact().subscribe(res => {
       this.contact = res;

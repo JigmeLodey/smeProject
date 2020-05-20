@@ -26,6 +26,7 @@ export class BookdonationComponent implements OnInit {
     {value: 'Other', viewValue: 'Other'}
   ];
   private readonly notifier: NotifierService;
+
   constructor(private formBuilder: FormBuilder, private service: UserService, private notifierService: NotifierService) {
     this.notifier = notifierService;
   }
@@ -37,12 +38,12 @@ export class BookdonationComponent implements OnInit {
   }
 
   feedback() {
-    if (this.thirdFormGroup.valid){
+    if (this.thirdFormGroup.valid) {
       this.service.postUserFeedback(this.thirdFormGroup.value).subscribe(res => {
         if (res) {
           this.notifier.notify('success', 'Success');
         } else {
-          this.notifier.notify('error', 'Failed' );
+          this.notifier.notify('error', 'Failed');
         }
       });
     }
@@ -66,8 +67,8 @@ export class BookdonationComponent implements OnInit {
       this.firstFormGroup.value.uid = localStorage.getItem('auth');
       this.service.postBook(this.firstFormGroup.value).subscribe(res => {
         if (res) {
-            this.notifier.notify('success', 'Success');
-        } else{
+          this.notifier.notify('success', 'Success');
+        } else {
           this.notifier.notify('error', 'Error');
         }
       });
@@ -98,7 +99,7 @@ export class BookdonationComponent implements OnInit {
 
   private stepThree() {
     this.thirdFormGroup = this.formBuilder.group({
-      feedback: [undefined, Validators.required]
+      message: [undefined, Validators.required]
     });
   }
 }

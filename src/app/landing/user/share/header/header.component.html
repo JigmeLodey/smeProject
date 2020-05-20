@@ -14,11 +14,18 @@
         <span class="nav-item nav-link" (click)="nav('profile')">Profile</span>
         <span class="nav-item nav-link" (click)="nav('feed')">Feeds</span>
         <span class="nav-item nav-link" (click)="nav('bd')"> Book Donation</span>
-        <span class="nav-item nav-link" (click)="nav('d')"> Donation</span>
         <span class="nav-item nav-link" (click)="nav('rb')"> Book Roll</span>
+        <span class="nav-item nav-link" (click)="nav('d')"> Donation</span>
       </div>
       <div class="navbar-nav ml-auto">
-        <a href="#" class="nav-item nav-link">Login</a>
+       <div class="profile">
+          <img src="../../../../../assets/image/others/female.png" class="embed-responsive" *ngIf="female" [matMenuTriggerFor]="menus">
+         <img src="../../../../../assets/image/others/male.png" class="embed-responsive" *ngIf="!female" [matMenuTriggerFor]="menus">
+         <mat-menu #menus="matMenu">
+           <span mat-menu-item (click)="onLogout()"><mat-icon>logout</mat-icon> Log Out</span>
+           <span mat-menu-item><mat-icon>delete</mat-icon> Delete Account</span>
+         </mat-menu>
+       </div>
       </div>
     </div>
   </nav>

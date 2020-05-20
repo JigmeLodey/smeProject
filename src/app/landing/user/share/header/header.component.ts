@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {UserService} from '../../user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,14 @@ import {Router} from '@angular/router';
   styleUrls: ['./header.component.css', '../../../../../../node_modules/bootstrap/dist/css/bootstrap.css']
 })
 export class HeaderComponent implements OnInit {
+  female = true;
+  gender: any;
 
-  constructor(private route: Router) {
+  constructor(private route: Router, private service: UserService) {
   }
 
   ngOnInit(): void {
+    this.getProfile();
   }
 
   nav(value: string) {
@@ -30,5 +34,21 @@ export class HeaderComponent implements OnInit {
         this.route.navigate(['./user/donation']);
       }
     }
+  }
+
+  private getProfile() {
+    this.service.getUser(localStorage.getItem('auth')).subscribe(res => {
+      this.gender = res;
+      if (this.gender.gender === 'Male') {
+        this.female = false;
+      } else {
+        this.female = true;
+      }
+    });
+  }
+
+  onLogout() {
+    localStorage.clear();
+    this.route.navigate(['']);
   }
 }

@@ -88,7 +88,7 @@ export class BookRollComponent implements OnInit {
 
   private third() {
     this.thirdFormGroup = this.formBuilder.group({
-      feedback: [undefined, Validators.required]
+      message: [undefined, Validators.required]
     });
   }
 

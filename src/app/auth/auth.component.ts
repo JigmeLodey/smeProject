@@ -57,7 +57,7 @@ export class AuthComponent implements OnInit {
       number: [undefined, Validators.required],
       city: ['city'],
       street: ['street'],
-      state: ['state'],
+      state: ['allow'],
       role: ['member'],
     });
   }
@@ -128,11 +128,15 @@ export class AuthComponent implements OnInit {
     if (this.signUpForm.valid) {
       this.service.getAuth().subscribe(res => {
         this.leng = Object.keys(res).length;
-        for (let i = 0; i < this.leng; i++) {
-          if (res[i].email === this.signUpForm.value.email) {
-            this.SignUpChecker = false;
-          } else {
-            this.SignUpChecker = true;
+        if (this.leng === 0) {
+          this.SignUpChecker = true;
+        } else {
+          for (let i = 0; i < this.leng; i++) {
+            if (res[i].email === this.signUpForm.value.email) {
+              this.SignUpChecker = false;
+            } else {
+              this.SignUpChecker = true;
+            }
           }
         }
         if (this.SignUpChecker) {

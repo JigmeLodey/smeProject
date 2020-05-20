@@ -21,22 +21,26 @@ import { BookdonationComponent } from './bookdonation/bookdonation.component';
 import { BookRollComponent } from './book-roll/book-roll.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {NotifierModule} from 'angular-notifier';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [UserComponent, FeedsComponent, ProfileComponent, BookstoreComponent, FeaturesComponent, ShareComponent, HeaderComponent, DonationComponent, BookdonationComponent, BookRollComponent],
-    imports: [
-        CommonModule,
-        UserRoutingModule,
-        MatToolbarModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatCardModule,
-        MatSelectModule,
-        NgbButtonsModule,
-        ReactiveFormsModule,
-        MatStepperModule,
-        NotifierModule
-    ]
+  imports: [
+    CommonModule,
+    UserRoutingModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatSelectModule,
+    NgbButtonsModule,
+    ReactiveFormsModule,
+    MatStepperModule,
+    NotifierModule,
+    MatMenuModule,
+    MatIconModule
+  ]
 })
 export class UserModule { }

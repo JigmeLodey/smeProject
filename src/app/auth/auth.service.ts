@@ -15,7 +15,7 @@ export class AuthService {
     return this.http.get(' http://localhost:3000/auth');
   }
   onPostSignUp(value) {
-    return this.http.post('http://localhost:3000/auth', value).pipe();
+    return this.http.post('http://localhost:3000/auth', value);
   }
   onRequest(value) {
     return this.http.post('http://localhost:3000/request', value);

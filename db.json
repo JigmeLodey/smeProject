@@ -1,181 +1,50 @@
 {
   "auth": [
     {
-      "name": "Jigme",
-      "email": "lodey@gmail.coms",
-      "number": 17171717,
-      "role": "member",
-      "gender": "Male",
-      "status": "allow",
-      "id": 9,
-      "city": "city",
-      "street": "street",
-      "state": "state",
-      "about": "about..."
-    },
-    {
-      "name": "Jigme",
-      "gender": "Male",
-      "number": 121212,
-      "status": "allow",
-      "role": "member",
-      "email": "kool@gmail.com",
-      "password": "the_bridge123",
-      "id": 10,
-      "city": "city",
-      "street": "street",
-      "state": "state",
-      "about": "about..."
-    },
-    {
-      "name": "Testing",
-      "gender": "Male",
-      "number": 121212,
-      "role": "member",
-      "status": "allow",
-      "email": "testing@gmail.com",
-      "password": "the_bridge123",
-      "id": 11,
-      "city": "city",
-      "about": "about...",
-      "street": "street",
-      "state": "state"
-    },
-    {
-      "name": "DrukBits",
-      "gender": "Male",
-      "number": 17171717,
-      "email": "drukbit@gmail.com",
-      "role": "member",
-      "status": "allow",
-      "password": "the_bridge",
-      "city": "city",
-      "street": "thimphu",
-      "state": "Thimphu",
-      "about": "My name is jigme love reading",
-      "id": 12
-    },
-    {
-      "name": "Bhutans",
-      "gender": "Male",
-      "number": 17171717,
-      "email": "bhutan@gmail.com",
-      "role": "member",
-      "status": "allow",
-      "password": "the_bridge",
-      "id": 13,
-      "city": "city",
-      "street": "street",
-      "state": "state",
-      "about": "about..."
-    },
-    {
       "name": "Jigme Lodey",
+      "email": "lodey@gmail.com",
+      "password": "123456",
+      "number": 1234567,
+      "role": "admin",
+      "gender": "Male",
+      "status": "allow",
+      "id": 1
+    },
+    {
+      "name": "Jigme ",
       "email": "jigme@gmail.com",
       "password": "123456",
       "gender": "Male",
-      "number": 77455740,
-      "role": "admin",
-      "status": "allow",
-      "id": 14,
-      "city": "city",
-      "street": "street",
-      "state": "state",
-      "about": "about..."
-    },
-    {
-      "name": "Tester",
-      "email": "test1234@gmail.com",
-      "password": "1234",
-      "gender": "Female",
-      "number": 1234567,
-      "role": "admin",
-      "id": 15,
-      "city": "city",
-      "street": "street",
-      "state": "state",
-      "about": "about..."
-    },
-    {
-      "name": "Jigme",
-      "gender": "Male",
-      "number": 123456,
-      "email": "lodey@lodey.com",
-      "role": "member",
-      "password": "lodey",
-      "city": "bonday",
-      "street": "paro",
-      "state": "paro",
-      "about": "i am good reader",
-      "id": 16
-    },
-    {
-      "name": "Hehe",
-      "email": "llodey@lodey.com",
-      "password": "lodey",
-      "gender": "Male",
       "number": 12345678,
-      "city": null,
-      "street": null,
-      "state": null,
-      "role": null,
-      "id": 17
+      "city": "city",
+      "street": "street",
+      "state": "allow",
+      "role": "member",
+      "id": 2
     }
   ],
-  "request": [
-    {
-      "id": 1,
-      "email": "lodey@gmail.com"
-    },
-    {
-      "id": 2,
-      "email": "lodey@gmail.com"
-    },
-    {
-      "id": 3,
-      "email": "kodoy@gmail.com"
-    },
-    {
-      "id": 4,
-      "email": "today@gmail.com"
-    }
-  ],
-  "contact": [
-    {
-      "id": 1,
-      "name": "sdnsdn",
-      "email": "fyda@gmail.com",
-      "phone": "77455740",
-      "message": "dsmnsdnfsdnfsmdfn"
-    },
-    {
-      "id": 2,
-      "name": "sdnsdn",
-      "email": "fyda@gmail.com",
-      "phone": "77455740",
-      "message": "dsmnsdnfsdnfsmdfn"
-    }
-  ],
+  "request": [],
+  "contact": [],
   "donation": [
     {
       "name": "Footwares",
       "id": 1,
-      "value": 5
+      "value": 0
     },
     {
       "id": 2,
       "name": "Clouts",
-      "value": 15
+      "value": 0
     },
     {
       "id": 3,
       "name": "Electronic",
-      "value": 3
+      "value": 0
     },
     {
       "name": "Other",
       "id": 4,
-      "value": 51
+      "value": 0
     }
   ],
   "books": [
@@ -192,198 +61,27 @@
     {
       "name": "Romance",
       "id": 3,
-      "value": 1
+      "value": 0
     },
     {
       "name": "Horror",
       "id": 4,
-      "value": 1
+      "value": 0
     },
     {
       "name": "Other",
       "id": 5,
-      "value": 1
+      "value": 0
     }
   ],
-  "usersBookDonate": [
-    {
-      "id": 1,
-      "name": "babys day out",
-      "author": "unknown",
-      "type": "other"
-    }
-  ],
-  "usersBookRoll": [
-    {
-      "id": 1,
-      "name": "baby day out",
-      "author": "unknown",
-      "type": "other",
-      "rID": 1
-    }
-  ],
-  "usersDonations": [
-    {
-      "name": "lkjdksjd",
-      "email": "sdjksd",
-      "phone": "sdksdj",
-      "type": "Other",
-      "addInfo": "sdjksdj",
-      "id": 32
-    },
-    {
-      "name": "test",
-      "email": "tes@gmail.com",
-      "phone": "121212",
-      "type": "Foot-ware",
-      "addInfo": "hello",
-      "id": 33
-    }
-  ],
-  "usersDonationsRequest": [
-    {
-      "name": "lkjdksjd",
-      "email": "sdjksd",
-      "phone": "sdksdj",
-      "type": "Other",
-      "place": "yala",
-      "addInfo": "sdjksdj",
-      "id": 32
-    }
-  ],
-  "subscribe": [
-    {
-      "id": 1,
-      "email": "drukbit@gmail.com"
-    },
-    {
-      "id": 2,
-      "email": "lodey@gmail.com"
-    },
-    {
-      "id": 3,
-      "email": "jiy@gmail.com"
-    },
-    {
-      "id": 4,
-      "email": "test@gmail.com"
-    }
-  ],
-  "post": [
-    {
-      "id": 1,
-      "userId": "9",
-      "feed": "hello",
-      "gender": "Male",
-      "userName": "Test"
-    },
-    {
-      "feed": "hey",
-      "userId": "15",
-      "userName": "why",
-      "gender": "Female",
-      "id": 2
-    },
-    {
-      "feed": "hello testing",
-      "userId": "15",
-      "userName": "null",
-      "gender": "Female",
-      "id": 3
-    },
-    {
-      "feed": "hello testing",
-      "userId": "15",
-      "userName": "hello",
-      "gender": "Female",
-      "id": 4
-    },
-    {
-      "feed": ";hsjksh",
-      "userId": "15",
-      "userName": null,
-      "gender": "Female",
-      "id": 5
-    },
-    {
-      "feed": "please work",
-      "userId": "15",
-      "userName": "Tester",
-      "gender": "Female",
-      "id": 6
-    },
-    {
-      "feed": "please work",
-      "userId": "15",
-      "userName": "Tester",
-      "gender": "Female",
-      "id": 7
-    },
-    {
-      "feed": "hello",
-      "userId": "15",
-      "userName": "Tester",
-      "gender": "Female",
-      "id": 8
-    },
-    {
-      "feed": "testing",
-      "userId": "15",
-      "userName": "Tester",
-      "gender": "Female",
-      "id": 9
-    }
-  ],
-  "bookStore": [
-    {
-      "name": "Footwares",
-      "id": 1,
-      "value": null
-    },
-    {
-      "name": "The Longest Ride",
-      "type": "Rolled",
-      "genre": "Romance",
-      "author": "Sparks, Nicholas",
-      "summary": "The novel “The Longest Ride” by Nicholas Sparks unravels two beautiful romance stories. The two stories are more different than alike but each love story have its own unique characteristics. The first story is about a man named Ira. ",
-      "id": 2
-    },
-    {
-      "name": "Lord of the Rings",
-      "type": "Donated",
-      "genre": "Other",
-      "author": "J. R. R. Tolkien",
-      "summary": "\n\nSauron, the Dark Lord, has gathered to him all the Rings of Power, the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring, the ring that rules them all, which has fallen into the hands of the hobbit, Bilbo Baggins. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.\n\nSince it was first published in 1954, The Lord of the Rings has been a book people have treasured. Steeped in unrivalled magic and otherworldliness, its sweeping fantasy has touched the hearts of young and old alike. Written by Professor J.R.R. Tolkien and consisting of three separate books (The Fellowship of the Ring, The Two Towers and The Return of the King) The Lord of the Rings was first published by George, Allen and Unwin between 1954 and 1955.\n\nAnd a magnificent achievement it is; an epic tale of friendship, love and heroism, a book that set the benchmark for all fantasy novels to come. Tolkien's descriptive narrative beautifully depicts Middle-earth and the journey that the Fellowship undertakes will remain with them for the rest of their lives.\n\nIt is hard to put into words the happiness that can be felt when reading a fantasy book as good as this and anybody who has never read it should set aside some time to do so. Is it the best fantasy book of all time? In my opinion, yes.\n\nThere's no salvation for a fantasy fan who hasn't read the gospel of the genre. The influence of The Lord of the Rings is so universal that everybody from George Lucas to Led Zeppelin has appropriated it for one purpose or another. Not just revolutionary because it was groundbreaking, The Lord of the Rings is timeless because it's the product of a truly top-shelf mind. Tolkien was a distinguished linguist and Oxford scholar of dead languages with strong ideas about the importance of myth and story and a deep appreciation of nature. His epic, 10 years in the making, recounts the Great War of the Ring and the closing of Middle-Earth's Third Age, a time when magic begins to fade from the world and men rise to dominance. Tolkien carefully details this transition with tremendous skill and love, creating in The Lord of the Rings a universal and all-embracing tale, a justly celebrated classic.",
-      "id": 3
-    }
-  ],
-  "feedback": [
-    {
-      "id": 1,
-      "message": "hello"
-    },
-    {
-      "feedback": "hello",
-      "id": 2
-    },
-    {
-      "feedback": "hello test",
-      "id": 3
-    },
-    {
-      "feedback": "all the way from donantion",
-      "id": 4
-    }
-  ],
-  "broll": [
-    {
-      "id": 1,
-      "bookname": "hello",
-      "booktype": "hello",
-      "author": "hey",
-      "username": "lodey",
-      "email": "lodey@gmail.com",
-      "phone": 12121212
-    }
-  ]
+  "usersBookDonate": [],
+  "usersBookRoll": [],
+  "usersDonations": [],
+  "usersDonationsRequest": [],
+  "subscribe": [],
+  "post": [],
+  "bookStore": [],
+  "feedback": [],
+  "broll": [],
+  "bdonaterequest": []
 }

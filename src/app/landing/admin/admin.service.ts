@@ -114,4 +114,16 @@ export class AdminService {
   onDeleteDonationRequest(id) {
     return this.http.delete(`http://localhost:3000/usersDonationsRequest/${id}`);
   }
+  getUserRquestForBook() {
+    return this.http.get('http://localhost:3000/bdonaterequest');
+  }
+  onDeleteBookRequest(id) {
+    return this.http.delete(`http://localhost:3000/bdonate/${id}`);
+  }
+  onUpdateDonation(value, id) {
+    return this.http.put(`http://localhost:3000/donation/${id}`, value);
+  }
+  onDeleteContact(id) {
+    return this.http.delete(`http://localhost:3000/contact/${id}`);
+  }
 }

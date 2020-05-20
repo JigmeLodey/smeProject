@@ -4,12 +4,12 @@
   <div class="container">
     <mat-card>
       <div class="card-title">
-        Book Roll
+        Book Donation
       </div>
       <mat-horizontal-stepper [linear]="isLinear" #stepper>
         <mat-step [stepControl]="firstFormGroup">
           <form [formGroup]="firstFormGroup">
-            <ng-template matStepLabel>Initiate Roll</ng-template>
+            <ng-template matStepLabel>Initiate Book Donation</ng-template>
             <div class="col-lg-12">
               <div class="col">
                 <div>
@@ -44,7 +44,7 @@
         </mat-step>
         <mat-step [stepControl]="secondFormGroup">
           <form [formGroup]="secondFormGroup">
-            <ng-template matStepLabel>Request Book</ng-template>
+            <ng-template matStepLabel>Request Book Donated</ng-template>
             <div class="col-lg-12">
               <div class="col">
                 <div>
@@ -102,7 +102,7 @@
                 <div>
                   <mat-form-field>
                     <mat-label>Feedback</mat-label>
-                    <textarea matInput formControlName="feedback">
+                    <textarea matInput formControlName="message">
 
                  </textarea>
                   </mat-form-field>
