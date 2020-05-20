@@ -18,6 +18,7 @@
       "number": 12345678,
       "city": "city",
       "street": "street",
+      "states": "state",
       "state": "allow",
       "role": "member",
       "id": 2

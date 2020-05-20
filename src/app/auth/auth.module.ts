@@ -8,11 +8,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {NotifierModule} from 'angular-notifier';
 import {MatSelectModule} from '@angular/material/select';
-import { AuthGuardComponent } from './auth-guard/auth-guard.component';
+
 
 
 @NgModule({
-  declarations: [AuthComponent, AuthGuardComponent],
+  declarations: [AuthComponent],
     imports: [
         CommonModule,
         AuthRoutingModule,
