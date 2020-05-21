@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from '../user.service';
+import {UserStateService} from '../user.state.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-bookstore',
@@ -9,7 +11,7 @@ import {UserService} from '../user.service';
 export class BookstoreComponent implements OnInit {
   books: any;
 
-  constructor(private service: UserService) {
+  constructor(private service: UserService, private state: UserStateService, private route: Router) {
   }
 
   ngOnInit(): void {
@@ -20,5 +22,10 @@ export class BookstoreComponent implements OnInit {
     this.service.getStore().subscribe(res => {
       this.books = res;
     });
+  }
+
+  nav(id) {
+    localStorage.setItem('book', id);
+    this.route.navigate(['./user/books']);
   }
 }

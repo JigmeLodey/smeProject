@@ -9,6 +9,8 @@ import {BookstoreComponent} from './bookstore/bookstore.component';
 import {DonationComponent} from './donation/donation.component';
 import {BookdonationComponent} from './bookdonation/bookdonation.component';
 import {BookRollComponent} from './book-roll/book-roll.component';
+import {ShowBookComponent} from './show-book/show-book.component';
+import {OtherProfileComponent} from './other-profile/other-profile.component';
 
 
 const routes: Routes = [
@@ -19,7 +21,9 @@ const routes: Routes = [
       {path: 'feature', component: FeaturesComponent},
   {path: 'donation', component: DonationComponent},
   {path: 'bookdonation', component: BookdonationComponent},
-  {path: 'bookroll', component: BookRollComponent}
+  {path: 'bookroll', component: BookRollComponent},
+  {path: 'books', component: ShowBookComponent},
+  {path: 'pro', component: OtherProfileComponent}
 ];
 
 @NgModule({

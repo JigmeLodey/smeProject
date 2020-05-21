@@ -65,8 +65,8 @@ export class UserService {
     return this.http.get(`http://localhost:3000/auth/${id}`);
   }
 
-  onUpdate(id, value: any) {
-    return this.http.put(`http://localhost:3000/auth/${id}`, value);
+  getBookById(id) {
+    return this.http.get(`http://localhost:3000/bookStore/${id}`);
   }
 
   getStore() {

@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="row">
+    <div class="center-box">
+      <div class="mat-card">
+      <div class="mat-card-title">
+        {{this.book?.name}}
+        <div class="mat-card-subtitle mt-2">
+          <ul>
+            <li>{{this.book?.author}}</li>
+            <li>{{this.book?.genre}}</li>
+            <li>{{this.book?.type}}</li>
+          </ul>
+        </div>
+      </div>
+        <mat-card-content>
+          <div class="mat-card-title">Summary</div>
+          {{this.book?.summary}}
+        </mat-card-content>
+        <mat-card-footer>
+          <button class="btn btn-primary col-lg-12 mt-4" (click)="back()">Back</button>
+        </mat-card-footer>
+      </div>
+    </div>
+  </div>
+</div>

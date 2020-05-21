@@ -1,0 +1,21 @@
+.center-box{
+  position:absolute;
+  top:200px;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:99;
+  margin:auto;
+  width:800px;
+  text-align:center;
+
+}
+.mat-card-title{
+  text-align: left;
+  padding: 30px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}

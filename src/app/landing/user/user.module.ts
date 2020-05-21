@@ -23,6 +23,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {NotifierModule} from 'angular-notifier';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import { ShowBookComponent } from './show-book/show-book.component';
+import { OtherProfileComponent } from './other-profile/other-profile.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {MatIconModule} from '@angular/material/icon';
     HeaderComponent,
     DonationComponent,
     BookdonationComponent,
-    BookRollComponent],
+    BookRollComponent,
+    ShowBookComponent,
+    OtherProfileComponent],
   imports: [
     CommonModule,
     UserRoutingModule,
