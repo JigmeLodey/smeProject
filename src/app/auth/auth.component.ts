@@ -57,7 +57,8 @@ export class AuthComponent implements OnInit {
       number: [undefined, Validators.required],
       city: ['city'],
       street: ['street'],
-      state: ['allow'],
+      state: ['State'],
+      Status: ['allow'],
       role: ['member'],
     });
   }

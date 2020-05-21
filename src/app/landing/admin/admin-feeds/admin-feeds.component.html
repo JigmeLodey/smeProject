@@ -89,19 +89,18 @@
       <div class="col-sm-12 col-md-12">
         <div class="card">
           <div class="card-header">
-            Name of book
+           {{this.books1?.name}}
           </div>
           <div class="card-body">
-            this is book and iy is like this
+            <div class="detail">
+              {{this.books1?.summary}}
+            </div>
           </div>
           <div class="card-footer">
             <div class="col-sm-12">
               <div class="row">
-                <div class="col-sm-6" style="cursor: pointer">
-                  Book Store
-                </div>
-                <div class="col-sm-6" style="cursor: pointer">
-                  Request Book
+                <div class="col-sm-12" style="cursor: pointer">
+                <span class="text-center btn btn-primary col-lg-12" (click)="nav()">Visit Store</span>
                 </div>
               </div>
             </div>
@@ -109,42 +108,40 @@
         </div>
         <div class="card mt-3">
           <div class="card-header">
-            Name of book
+            {{this.books2?.name}}
           </div>
           <div class="card-body">
-            this is book and iy is like this
+            <div class="detail">
+              {{this.books2?.summary}}
+            </div>
           </div>
           <div class="card-footer">
             <div class="col-sm-12">
               <div class="row">
-                <div class="col-sm-6" style="cursor: pointer">
-                  Book Store
-                </div>
-                <div class="col-sm-6" style="cursor: pointer">
-                  Request Book
+                <div class="col-sm-12" style="cursor: pointer">
+                  <span class="text-center btn btn-primary col-lg-12" (click)="nav()">Visit Store</span>
                 </div>
               </div>
             </div>
-        </div>
+          </div>
         </div>
         <div class="card mt-3">
           <div class="card-header">
-            Name of book
+            {{this.books3?.name}}
           </div>
           <div class="card-body">
-            this is book and iy is like this
+            <div class="detail">
+              {{this.books3?.summary}}
+            </div>
           </div>
           <div class="card-footer">
-           <div class="col-sm-12">
-             <div class="row">
-               <div class="col-sm-6" style="cursor: pointer">
-                 Book Store
-               </div>
-               <div class="col-sm-6" style="cursor: pointer">
-                 Request Book
-               </div>
-             </div>
-           </div>
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-12" style="cursor: pointer">
+                  <span class="text-center btn btn-primary col-lg-12" (click)="nav()">Visit Store</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

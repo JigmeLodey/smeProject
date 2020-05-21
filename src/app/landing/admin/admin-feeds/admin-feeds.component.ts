@@ -3,6 +3,7 @@ import {AdminService} from '../admin.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {ArrayDataSource} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-admin-feeds',
@@ -13,14 +14,21 @@ export class AdminFeedsComponent implements OnInit {
   feeds: any;
   adminDetails: any;
   postForm: FormGroup;
+  books1: any;
+  books2: any;
+  books3: any;
+  bookstore: any
 
-  constructor(private service: AdminService, private formBuilder: FormBuilder) {
+  private length: number;
+
+  constructor(private service: AdminService, private formBuilder: FormBuilder, private route: Router) {
   }
 
   ngOnInit(): void {
     this.getFeed();
     this.getAmin();
     this.buildForm();
+    this.onRandom();
   }
 
   private getFeed() {
@@ -57,5 +65,22 @@ export class AdminFeedsComponent implements OnInit {
         }
       });
     }
+  }
+
+  private onRandom() {
+    this.service.getStore().subscribe(res => {
+      this.length = Object.keys(res).length;
+      this.bookstore = res;
+      const random1 = Math.floor(Math.random() * (this.length));
+      const random2 = Math.floor(Math.random() * (this.length));
+      const random3 = Math.floor(Math.random() * (this.length));
+      this.books1 = this.bookstore[random1];
+      this.books2 = this.bookstore[random2];
+      this.books3 = this.bookstore[random3];
+    });
+  }
+
+  nav() {
+    this.route.navigate(['./admin/store']);
   }
 }

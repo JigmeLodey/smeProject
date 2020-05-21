@@ -19,7 +19,7 @@ export class UserService {
   }
 
   postBook(value) {
-    return this.http.post('http://localhost:3000/usersDonations', value);
+    return this.http.post('http://localhost:3000/usersBookDonate', value);
   }
 
   onUpdateChart(value, id) {
@@ -34,7 +34,7 @@ export class UserService {
   }
 
   onRequestDonation(value) {
-    return this.http.post(' http://localhost:3000/bdonate', value);
+    return this.http.post(' http://localhost:3000/bdonaterequest', value);
   }
 
   postDonationValue(value) {

@@ -77,13 +77,13 @@ export class DonationComponent implements OnInit {
       this.clouth = res[1].value;
       this.electronic = res[2].value;
       this.others = res[3].value;
-      if (type === 'Foot-ware') {
+      if (type === 'Footwear') {
         this.footware = this.footware - 1;
-        this.service.onUpdateDonation({name: 'Footwares', id: 1, value: this.footware}, 1).subscribe(response => response);
+        this.service.onUpdateDonation({name: 'Footwear', id: 1, value: this.footware}, 1).subscribe(response => response);
         console.log(this.footware);
-      } else if (type === 'Clout') {
-        this.footware = this.footware - 1;
-        this.service.onPostBook({name: 'Clout', id: 1, value: this.footware}, 2).subscribe(response => response);
+      } else if (type === 'Cloth') {
+        this.clouth = this.clouth - 1;
+        this.service.onUpdateDonation({name: 'Cloth', id: 2, value: this.footware}, 2).subscribe(response => response);
       } else if (type === 'Electronic') {
         this.footware = this.footware - 1;
         this.service.onPostBook({name: 'Electronic', id: 1, value: this.footware}, 3).subscribe(response => response);

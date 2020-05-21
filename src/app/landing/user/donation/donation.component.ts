@@ -18,8 +18,8 @@ export class DonationComponent implements OnInit {
   thirdFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   donation: Donations[] = [
-    {value: 'Foot-ware', viewValue: 'Foot-ware'},
-    {value: 'Clouts', viewValue: 'Clouts'},
+    {value: 'Footwear', viewValue: 'Footwear'},
+    {value: 'Cloth', viewValue: 'Cloth'},
     {value: 'Electronic', viewValue: 'Electronic'},
     {value: 'Other', viewValue: 'Other'}
   ];
@@ -77,12 +77,12 @@ export class DonationComponent implements OnInit {
       this.other = res[3].value;
       if (this.firstFormGroup.valid) {
         const value = this.firstFormGroup.value.type;
-        if (value === 'Foot-ware') {
+        if (value === 'Footwear') {
           this.footware = this.footware + 1;
-          this.service.onUpdateChart({name: 'Footwares', id: 1, value: this.footware}, 1).subscribe(response => response);
-        } else if (value === 'Clouts') {
+          this.service.onUpdateChart({name: 'Footwear', id: 1, value: this.footware}, 1).subscribe(response => response);
+        } else if (value === 'Cloth') {
           this.clouts = this.clouts + 1;
-          this.service.onUpdateChart({name: 'Clouts', id: 2, value: this.clouts}, 2).subscribe(response => response);
+          this.service.onUpdateChart({name: 'Cloth', id: 2, value: this.clouts}, 2).subscribe(response => response);
         } else if (value === 'Electronic') {
           this.electronic = this.electronic + 1;
           this.service.onUpdateChart({name: 'Electronic', id: 3, value: this.electronic}, 3).subscribe(response => response);

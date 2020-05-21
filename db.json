@@ -12,30 +12,39 @@
     },
     {
       "name": "Jigme ",
-      "email": "jigme@gmail.com",
-      "password": "123456",
       "gender": "Male",
       "number": 12345678,
-      "city": "city",
-      "street": "street",
-      "states": "state",
-      "state": "allow",
+      "email": "jigme@gmail.com",
       "role": "member",
+      "status": "allow",
+      "password": "123456",
+      "city": "Bonday",
+      "street": "Bonday",
+      "state": "Paro",
+      "about": "Hello my name is jigme am new in this and i love reading books",
       "id": 2
     }
   ],
   "request": [],
-  "contact": [],
+  "contact": [
+    {
+      "name": "Jigme Lodey",
+      "email": "jigmelodey@gmail.com",
+      "phone": "77455740",
+      "message": "Hello there may i know more about this website la.",
+      "id": 1
+    }
+  ],
   "donation": [
     {
-      "name": "Footwares",
+      "name": "Footwear",
       "id": 1,
-      "value": 0
+      "value": 1
     },
     {
+      "name": "Cloth",
       "id": 2,
-      "name": "Clouts",
-      "value": 0
+      "value": 2
     },
     {
       "id": 3,
@@ -52,7 +61,7 @@
     {
       "name": "Science Fiction",
       "id": 1,
-      "value": 0
+      "value": 1
     },
     {
       "name": "Action",
@@ -62,12 +71,12 @@
     {
       "name": "Romance",
       "id": 3,
-      "value": 0
+      "value": 1
     },
     {
       "name": "Horror",
       "id": 4,
-      "value": 0
+      "value": 2
     },
     {
       "name": "Other",
@@ -75,14 +84,131 @@
       "value": 0
     }
   ],
-  "usersBookDonate": [],
-  "usersBookRoll": [],
-  "usersDonations": [],
-  "usersDonationsRequest": [],
+  "usersBookDonate": [
+    {
+      "author": "Andy Weir",
+      "name": "The Martian",
+      "type": "Science Fiction",
+      "uid": "2",
+      "id": 1
+    }
+  ],
+  "usersBookRoll": [
+    {
+      "name": "The Haunted Car",
+      "author": "R. L. Stine",
+      "type": "Horror",
+      "uid": "2",
+      "id": 1
+    }
+  ],
+  "usersDonations": [
+    {
+      "name": "Sonam",
+      "email": "sonam@yahoo.com",
+      "phone": "17888888",
+      "type": "Foot-ware",
+      "addInfo": "Please donate this to those who don't have anything to waer",
+      "id": 1
+    },
+    {
+      "name": "Soanam Lodey",
+      "email": "sonam@gmail.com",
+      "phone": "17898280",
+      "type": "Cloth",
+      "addInfo": "Please give it with love",
+      "id": 2
+    },
+    {
+      "name": "Tandin Zam",
+      "email": "songtadee@gmail.com",
+      "phone": "17889909",
+      "type": "Cloth",
+      "addInfo": "As a birthday gift",
+      "id": 3
+    }
+  ],
+  "usersDonationsRequest": [
+    {
+      "addInfo": "We are member of BYF and we help to donate thing if there are interested one to donate, SO i found there is some cloths for donation so we planning to take it to draktsho kanglung",
+      "place": "DrakTsho",
+      "type": "Cloth",
+      "name": "Tshering Choki",
+      "email": "tsheringchoki@gmail.com",
+      "phone": "17778900",
+      "id": 1
+    }
+  ],
   "subscribe": [],
-  "post": [],
-  "bookStore": [],
-  "feedback": [],
-  "broll": [],
-  "bdonaterequest": []
+  "post": [
+    {
+      "feed": "Hello users we welcome you all",
+      "userId": "2",
+      "userName": "Jigme ",
+      "gender": "Male",
+      "id": 1
+    }
+  ],
+  "bookStore": [
+    {
+      "name": "The Haunted Car",
+      "type": "Rolled",
+      "genre": "Horror",
+      "author": "R. L. Stine",
+      "summary": "\n\nMitchell Moinian, the main character of The Haunted Car, is a 12-year-old whose family moved to the small town of Forrest Valley for his dad’s new job. Mitchell is obsessed with cars and spends his time building model cars in his room—when he’s not being bothered by his younger brother, Todd.\n\nAfter his father’s beat-up car is wrecked and needs to be replaced, the family buys a luxury sports sedan from a mysterious local who sells the car at a shockingly low price. Mitchell’s excitement over the new car soon turns to dread as he discovers that the vehicle has a mind of its own—an evil mind. Unfortunately, his parents won’t believe him, so it’s up to him to uncover the dangerous secret behind this haunted car.",
+      "id": 1
+    },
+    {
+      "name": "The Longest Ride",
+      "type": "Donated",
+      "genre": "Romance",
+      "author": "Nicholas Sparks",
+      "summary": "The novel “The Longest Ride” by Nicholas Sparks unravels two beautiful romance stories. The two stories are more different than alike but each love story have its own unique characteristics. The first story is about a man named Ira. He gets into a wreck on a snowy night and starts hallucinating his wife, who died 9 years ago. They start recapping their “Longest Ride” together. There love story came to be in the 1900’s around World War 2, making for some tough times and some beautifully romantic times. The other story is about young Sophia and Luke. Sophia is in college and Luke rides bulls. They meet at a rodeo and their totally different worlds collide. They soon start a relationship that is different than any other they’ve had. I loved this book because I love romance novels. I recommend it if you love sappy romance.",
+      "id": 2
+    },
+    {
+      "name": "The Martian",
+      "type": "Donated",
+      "genre": "Science Fiction",
+      "author": "Andy Weir David Fish",
+      "summary": "There is a problem, however, when Weir tries to find a happy medium between doubling down on a topic and leaving it alone. Characterization is one example: it’s shallow at its best and clichéd at its worst. Watney isn’t the only character in The Martian. There’s also a supporting cast comprising some folks at NASA and the other astronauts from Ares 3, and Weir cannot help but give each of them a little too much attention. The result is a hodgepodge of about a dozen half-baked characters who only slow down the story. We probably don’t need to know if a young woman operating satellites for NASA gets a promotion, and we certainly don’t need to be there when her superiors argue over it, but Weir feels otherwise.",
+      "id": 3
+    },
+    {
+      "name": "Pet Sematary",
+      "type": "Rolled",
+      "genre": "Horror",
+      "author": " Stephen King",
+      "summary": "Dr. Louis Creed and his wife, Rachel, relocate from Boston to rural Maine with their two young children. The couple soon discover a mysterious burial ground hidden deep in the woods near their new home. When tragedy strikes, Louis turns to his neighbor Jud Crandall, setting off a perilous chain reaction that unleashes an unspeakable evil with horrific consequences.",
+      "id": 4
+    }
+  ],
+  "feedback": [
+    {
+      "message": "I would like to suggest to make more feature on this web app",
+      "id": 1
+    }
+  ],
+  "broll": [
+    {
+      "bookname": "The Haunted Car",
+      "author": "R. L. Stine",
+      "booktype": "Horror",
+      "username": "Kinley Yangden",
+      "email": "kinleyyangdenlodey@gmail.com",
+      "phone": "77455790",
+      "id": 1
+    }
+  ],
+  "bdonaterequest": [
+    {
+      "author": "Nicholas Sparks",
+      "bookname": "The Longest Ride",
+      "booktype": "Romance",
+      "username": "Pema Yangki",
+      "email": "pemayangki@gmail.com",
+      "phone": "77678945",
+      "id": 1
+    }
+  ]
 }
