@@ -23,6 +23,36 @@
       "state": "Paro",
       "about": "Hello my name is jigme am new in this and i love reading books",
       "id": 2
+    },
+    {
+      "name": "Khentse",
+      "gender": "Male",
+      "number": 17666666,
+      "role": "admin",
+      "email": "khentse@gmail.com",
+      "password": "the_bridge",
+      "status": "allow",
+      "id": 3
+    },
+    {
+      "name": "Gyeltsen Gympo",
+      "gender": "Male",
+      "number": 17888888,
+      "role": "admin",
+      "email": "gympo@gmail.com",
+      "password": "the_bridge",
+      "status": "allow",
+      "id": 4
+    },
+    {
+      "name": "Pema Yangki",
+      "gender": "Female",
+      "number": 17755523,
+      "role": "admin",
+      "email": "pemayangki@gmail.com",
+      "password": "the_bridge",
+      "status": "allow",
+      "id": 5
     }
   ],
   "request": [],
