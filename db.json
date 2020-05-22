@@ -2,16 +2,20 @@
   "auth": [
     {
       "name": "Jigme Lodey",
-      "email": "lodey@gmail.com",
-      "password": "123456",
-      "number": 1234567,
-      "role": "admin",
       "gender": "Male",
+      "number": 1234567,
+      "email": "lodey@gmail.com",
+      "role": "admin",
       "status": "allow",
+      "password": "123456",
+      "city": "Bonday",
+      "street": "Bonday",
+      "state": "Paro",
+      "about": "I Love Book",
       "id": 1
     },
     {
-      "name": "Jigme ",
+      "name": "Jigme Lodey",
       "gender": "Male",
       "number": 12345678,
       "email": "jigme@gmail.com",
@@ -21,7 +25,7 @@
       "city": "Bonday",
       "street": "Bonday",
       "state": "Paro",
-      "about": "Hello my name is jigme am new in this and i love reading books",
+      "about": "Hello am testing",
       "id": 2
     },
     {
@@ -173,10 +177,24 @@
   "post": [
     {
       "feed": "Hello users we welcome you all",
-      "userId": "2",
+      "userId": 1,
       "userName": "Jigme ",
       "gender": "Male",
       "id": 1
+    },
+    {
+      "feed": "hello testing",
+      "userName": "Jigme Lodey",
+      "gender": "Male",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "feed": "Hello i am pema ",
+      "userId": 5,
+      "userName": "Pema Yangki",
+      "gender": "Female",
+      "id": 3
     }
   ],
   "bookStore": [

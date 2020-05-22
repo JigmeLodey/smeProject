@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 })
 export class ShowBookComponent implements OnInit {
   public Id: any;
-  private book: any;
+   book: any;
 
   constructor(private service: UserService, private state: UserStateService, private route: Router) {
   }

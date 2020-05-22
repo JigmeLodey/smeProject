@@ -1,1 +1,161 @@
-<app-header></app-header>
+<app-header *ngIf="!id"></app-header>
+
+<div class="container" *ngIf="!id">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-sm-2">
+       <div class="profile">
+          <img src="../../../../assets/image/others/male.png" *ngIf="user?.gender == 'Male'" class="embed-responsive">
+         <img src="../../../../assets/image/others/female.png" *ngIf="user?.gender != 'Male'" class="embed-responsive">
+       </div>
+       <div class="mat-card-subtitle mt-3 border-top">
+         <ul>
+           <li>{{user?.name}}</li>
+           <li>{{user?.email}}</li>
+           <li>{{user?.number}}</li>
+         </ul>
+       </div>
+        <div class="mat-card-subtitle mt-5 border-top">
+          <span class="mt-4">Setting</span>
+          <ul class="sublink" >
+            <li><mat-slide-toggle (click)="color()" *ngIf="!id">Night Mood On</mat-slide-toggle>
+            </li>
+            <li class="link" (click)="goto('BRoll')">Create Book Roll</li>
+            <li class="link" (click)="goto('Bdonate')">Donate Books</li>
+            <li class="link" (click)="goto('donate')">Donate</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-sm-7">
+        <form class="form-group" [formGroup]="formTA">
+          <textarea class="col-lg-12 ta" formControlName="feed"></textarea>
+        </form>
+        <button class="btn btn-primary" (click)="send()">Post</button>
+        <div class="mat-card col-lg-12 mt-5" *ngFor="let p of post">
+          <div class="card-title" style="padding: 12px">
+            <div class="col">
+              <div class="profile" (click)="nav(p.userId)">
+                <img src="../../../../assets/image/others/male.png" alt="user" *ngIf="p.gender == 'Male'" class="embed-responsive">
+                <img src="../../../../assets/image/others/female.png" alt="user" *ngIf="p.gender == 'Female'" class="embed-responsive">
+              </div>
+              <div class="col-sm-6 mat-card-subtitle mt-3">
+                {{p.userName}}
+              </div>
+            </div>
+          </div>
+          <div class="card-body" style="color: black">
+            {{p.feed}}
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+       <div class="card">
+         <div class="card-title mat-card-title" style="padding:20px; ">Recent Book</div>
+         <div class="card-body">
+           <div class="card bookcard">
+             <mat-card-title>{{this.books?.name}}</mat-card-title>
+             <div class="card-body about">
+               {{this.books?.summary}}
+             </div>
+           </div>
+           <div class="card bookcard">
+             <mat-card-title>{{this.books2?.name}}</mat-card-title>
+             <div class="card-body about">
+               {{this.books2?.summary}}
+             </div>
+           </div>
+           <div class="card bookcard">
+             <mat-card-title>{{this.books3?.name}}</mat-card-title>
+             <div class="card-body about">
+               {{this.books3?.summary}}
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+<body *ngIf="id" style="background: #000000; color: white;">
+<app-header style="background: #000000"></app-header>
+<div class="container" >
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="profile">
+          <img src="../../../../assets/image/others/male.png" *ngIf="user?.gender == 'Male'" class="embed-responsive">
+          <img src="../../../../assets/image/others/female.png" *ngIf="user?.gender != 'Male'" class="embed-responsive">
+        </div>
+        <div class="mat-card-subtitle mt-3 border-top">
+          <ul style="color: white">
+            <li>{{user?.name}}</li>
+            <li>{{user?.email}}</li>
+            <li>{{user?.number}}</li>
+          </ul>
+        </div>
+        <div class="mat-card-subtitle mt-5 border-top">
+          <span style="color: white" class="mt-4">Setting</span>
+          <ul class="sublink" style="color: white">
+            <li>
+              <mat-slide-toggle (click)="color()" checked *ngIf="id">Night Mode Off</mat-slide-toggle>
+            </li>
+            <li>Create Book Roll</li>
+            <li>Donate Books</li>
+            <li>Donate</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-sm-7">
+
+          <form class="form-group" [formGroup]="formTA">
+            <textarea class="col-lg-12 ta" formControlName="feed"></textarea>
+          </form>
+          <button class="btn btn-primary" (click)="send()">Post</button>
+        <div class="mat-card col-lg-12 mt-5" *ngFor="let p of post">
+         <div class="card-title" style="padding: 12px">
+            <div class="col">
+              <div class="profile">
+                <img src="../../../../assets/image/others/male.png" alt="user" *ngIf="p.gender == 'Male'" class="embed-responsive">
+                <img src="../../../../assets/image/others/female.png" alt="user" *ngIf="p.gender == 'Female'" class="embed-responsive">
+              </div>
+              <div class="col-sm-6 mat-card-subtitle mt-3">
+                {{p.userName}}
+              </div>
+            </div>
+         </div>
+          <div class="card-body" style="color: black">
+              {{p.feed}}
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="background: black">
+          <div class="card-title mat-card-title" style="padding:20px;color: white ">Recent Book</div>
+          <div class="card-body">
+            <div class="card bookcard">
+              <mat-card-title style="color: black ">{{this.books?.name}}</mat-card-title>
+              <div class="card-body about">
+                {{this.books?.summary}}
+              </div>
+            </div>
+            <div class="card bookcard">
+              <mat-card-title style="color: black ">{{this.books2?.name}}</mat-card-title>
+              <div class="card-body about">
+                {{this.books2?.summary}}
+              </div>
+            </div>
+            <div class="card bookcard">
+              <mat-card-title style="color: black ">{{this.books3?.name}}</mat-card-title>
+              <div class="card-body about">
+                {{this.books3?.summary}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

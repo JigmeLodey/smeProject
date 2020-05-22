@@ -55,7 +55,7 @@ export class AdminFeedsComponent implements OnInit {
 
   onPost() {
     if (this.postForm.value.feed !== null) {
-      this.postForm.value.userId = localStorage.getItem('auth');
+      this.postForm.value.userId = this.adminDetails.id;
       this.postForm.value.gender = this.adminDetails.gender;
       this.postForm.value.userName = this.adminDetails.name;
       this.service.addPost(this.postForm.value).subscribe(res => {

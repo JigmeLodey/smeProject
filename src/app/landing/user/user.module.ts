@@ -15,7 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
 import {NgbButtonsModule} from '@ng-bootstrap/ng-bootstrap';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DonationComponent} from './donation/donation.component';
 import {BookdonationComponent} from './bookdonation/bookdonation.component';
 import {BookRollComponent} from './book-roll/book-roll.component';
@@ -25,6 +25,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { ShowBookComponent } from './show-book/show-book.component';
 import { OtherProfileComponent } from './other-profile/other-profile.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -53,7 +54,9 @@ import { OtherProfileComponent } from './other-profile/other-profile.component';
     MatStepperModule,
     NotifierModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatSlideToggleModule,
+    FormsModule
   ]
 })
 export class UserModule {
