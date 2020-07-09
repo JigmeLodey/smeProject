@@ -1,1 +1,62 @@
-<router-outlet></router-outlet>
+<mat-toolbar>
+ <div class="container">
+   <div class="row">
+    <div class="col-lg-4">
+      <div class="logo">
+      </div>
+    </div>
+     <div class="col-lg-5">
+        here
+     </div>
+   </div>
+ </div>
+</mat-toolbar>
+<div class="container-fluid">
+ <div class="row">
+   <div class="col-lg-2">
+     <div class="container">
+       <div class="side-nav">
+         <div class="flex-column">
+           <div class="profile">
+              <div class="profile-image" *ngIf="sex === 'Male'"></div>
+             <div style="background-image: url('../../../assets/image/others/female.png')"  *ngIf="sex === 'Female'"> hello</div>
+           </div>
+           <div class="col-lg-12 nav-link">
+             <ul>
+               <li (click)="nav('dashboard')">
+                <mat-icon>dashboard</mat-icon> <span>Dashboard</span>
+               </li>
+               <li (click)="nav('profile')">
+                 <mat-icon>user</mat-icon> <span>Profile</span>
+
+               </li>
+               <li (click)="nav('feed')">
+                 Feeds
+               </li>
+               <li  (click)="nav('donation')">
+                Donation
+               </li>
+               <li  (click)="nav('roll')">
+                 Book Roll
+               </li>
+               <li  (click)="nav('book')">
+                 Book Donation
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-lg-6">
+    <router-outlet></router-outlet>
+   </div>
+   <div class="col-lg-3">
+     <div class="card mt-3" *ngFor="let b of books; let i = index">
+       <div class="card-title ml-1" *ngIf="i<3">{{b.name}}</div>
+       <div class="card-body ml-1" *ngIf="i<3">{{b.summary}}</div>
+       <div class="card-footer ml-1" *ngIf="i<3"></div>
+     </div>
+   </div>
+ </div>
+</div>

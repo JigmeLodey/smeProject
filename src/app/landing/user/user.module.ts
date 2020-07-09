@@ -26,6 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { ShowBookComponent } from './show-book/show-book.component';
 import { OtherProfileComponent } from './other-profile/other-profile.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -41,23 +42,24 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     BookRollComponent,
     ShowBookComponent,
     OtherProfileComponent],
-  imports: [
-    CommonModule,
-    UserRoutingModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCardModule,
-    MatSelectModule,
-    NgbButtonsModule,
-    ReactiveFormsModule,
-    MatStepperModule,
-    NotifierModule,
-    MatMenuModule,
-    MatIconModule,
-    MatSlideToggleModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        UserRoutingModule,
+        MatToolbarModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCardModule,
+        MatSelectModule,
+        NgbButtonsModule,
+        ReactiveFormsModule,
+        MatStepperModule,
+        NotifierModule,
+        MatMenuModule,
+        MatIconModule,
+        MatSlideToggleModule,
+        FormsModule,
+        MatSidenavModule
+    ]
 })
 export class UserModule {
 }

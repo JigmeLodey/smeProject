@@ -1,6 +1,6 @@
 <app-header *ngIf="!id"></app-header>
 
-<div class="container" *ngIf="!id">
+<div class="container mt-3" *ngIf="!id">
   <div class="col-md-12">
     <div class="row">
       <div class="col-sm-2">
@@ -49,31 +49,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-3">
-       <div class="card">
-         <div class="card-title mat-card-title" style="padding:20px; ">Recent Book</div>
-         <div class="card-body">
-           <div class="card bookcard">
-             <mat-card-title>{{this.books?.name}}</mat-card-title>
-             <div class="card-body about">
-               {{this.books?.summary}}
-             </div>
-           </div>
-           <div class="card bookcard">
-             <mat-card-title>{{this.books2?.name}}</mat-card-title>
-             <div class="card-body about">
-               {{this.books2?.summary}}
-             </div>
-           </div>
-           <div class="card bookcard">
-             <mat-card-title>{{this.books3?.name}}</mat-card-title>
-             <div class="card-body about">
-               {{this.books3?.summary}}
-             </div>
-           </div>
-         </div>
-       </div>
-      </div>
+
     </div>
   </div>
 </div>
@@ -127,31 +103,6 @@
          </div>
           <div class="card-body" style="color: black">
               {{p.feed}}
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card" style="background: black">
-          <div class="card-title mat-card-title" style="padding:20px;color: white ">Recent Book</div>
-          <div class="card-body">
-            <div class="card bookcard">
-              <mat-card-title style="color: black ">{{this.books?.name}}</mat-card-title>
-              <div class="card-body about">
-                {{this.books?.summary}}
-              </div>
-            </div>
-            <div class="card bookcard">
-              <mat-card-title style="color: black ">{{this.books2?.name}}</mat-card-title>
-              <div class="card-body about">
-                {{this.books2?.summary}}
-              </div>
-            </div>
-            <div class="card bookcard">
-              <mat-card-title style="color: black ">{{this.books3?.name}}</mat-card-title>
-              <div class="card-body about">
-                {{this.books3?.summary}}
-              </div>
-            </div>
           </div>
         </div>
       </div>
